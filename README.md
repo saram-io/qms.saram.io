@@ -114,16 +114,19 @@ qms.saram.io/
     │   ├── ComparisonTable.astro # Head-to-head Tier 1 & 2 comparison matrix
     │   ├── ShortlistMatrix.astro # Buyer segment overview cards
     │   ├── VendorCard.astro   # Individual vendor card with AI badges & links
-    │   └── VendorDirectory.astro # Client-side search and tier filtering
+    │   ├── VendorDirectory.astro # Client-side search and tier filtering
+    │   └── AiReadinessTracker.astro # Walled Garden vs MCP/API Readiness Tracker component
     ├── data/
     │   ├── vendors.ts         # Complete typed dataset of all 4 tiers
-    │   └── shortlists.ts      # Buyer segments, criteria, and watch-outs
+    │   ├── shortlists.ts      # Buyer segments, criteria, and watch-outs
+    │   └── aiReadinessTracker.ts # Open data, MCP, API grades, and AI trust dataset
     ├── layouts/
     │   └── Layout.astro       # Master HTML layout, fonts, and OpenGraph metadata
     ├── pages/
     │   ├── index.astro        # Home: Highlights, overview, shortlist, directory
     │   ├── tiers.astro        # In-depth architectural analysis of Tiers 1–4
     │   ├── shortlist.astro    # Buyer segment guide, RFP questions, decision matrices
+    │   ├── ai-readiness-tracker.astro # QMS AI Readiness & Open Data Tracker (Walled Garden vs MCP)
     │   ├── ai-trends.astro    # 2026 AI milestones: ISO 42001, MCP, agentic compliance
     │   ├── vendors.astro      # Full searchable and filterable vendor directory
     │   └── about.astro        # Methodology, durable citations, and advisory services
