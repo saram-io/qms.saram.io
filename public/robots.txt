@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qms.saram.io/sitemap-index.xml

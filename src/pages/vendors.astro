@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import VendorDirectory from '../components/VendorDirectory.astro';
+import { VENDORS } from '../data/vendors';
+---
+
+<Layout 
+  title="Complete QMS Vendor Directory (2026) | Saram Consulting"
+  description="Search and filter all tracked Quality Management Systems (QMS) across all 4 market tiers, deployment types, and AI capabilities."
+  activePath="/vendors"
+>
+  <main>
+    <section class="hero-text">
+      <h1>Complete QMS Vendor Directory</h1>
+      <p class="hero-subtitle">All {VENDORS.length} Tracked Quality Management Systems and Specialist Platforms</p>
+      <p>
+        Use the interactive controls below to search across vendor names, product suites, target buyers (e.g. <em>Big-pharma</em>, <em>Med device</em>, <em>CDMOs</em>), AI readiness ratings, and key differentiators.
+      </p>
+    </section>
+
+    <section>
+      <VendorDirectory />
+    </section>
+  </main>
+</Layout>

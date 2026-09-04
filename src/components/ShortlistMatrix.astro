@@ -1,0 +1,47 @@
+---
+import { BUYER_SHORTLISTS } from '../data/shortlists';
+---
+
+<div class="shortlist-grid">
+  {BUYER_SHORTLISTS.map(segment => (
+    <div class="shortlist-card">
+      <div class="shortlist-segment">
+        <span>{segment.name}</span>
+      </div>
+      <div style="font-size: 11.5px; color: var(--muted-text); line-height: 1.4;">
+        {segment.subtitle}
+      </div>
+
+      <div style="margin: 6px 0;">
+        <div style="font-size: 10.5px; text-transform: uppercase; color: var(--accent-tag); font-weight: 600; margin-bottom: 4px;">Recommended Vendors:</div>
+        <div class="shortlist-vendors">
+          {segment.recommendedVendors.map(v => (
+            <span class="shortlist-vendor-tag" title={v.note}>{v.name}</span>
+          ))}
+        </div>
+      </div>
+
+      <div class="shortlist-rationale">
+        <p style="margin-bottom: 8px; font-size: 12px; color: #222;">{segment.summary}</p>
+        
+        <details style="font-size: 11.5px; margin-top: 6px; cursor: pointer;">
+          <summary style="font-weight: 600; color: #000;">View Selection Criteria & Watch-Outs</summary>
+          <div style="padding-top: 8px; border-top: 1px dashed #00000018; margin-top: 6px;">
+            <div style="font-weight: 600; margin-bottom: 4px; color: #111;">Key Criteria:</div>
+            <ul style="padding-left: 16px; margin-bottom: 8px; line-height: 1.45;">
+              {segment.selectionCriteria.map(c => (
+                <li>{c}</li>
+              ))}
+            </ul>
+            <div style="font-weight: 600; margin-bottom: 4px; color: #722;">Watch-Outs:</div>
+            <ul style="padding-left: 16px; line-height: 1.45; color: #555;">
+              {segment.watchOuts.map(w => (
+                <li>{w}</li>
+              ))}
+            </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+  ))}
+</div>

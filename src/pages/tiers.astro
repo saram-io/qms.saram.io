@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import VendorCard from '../components/VendorCard.astro';
+import { VENDORS } from '../data/vendors';
+
+const tier1Vendors = VENDORS.filter(v => v.tier === 1);
+const tier2Vendors = VENDORS.filter(v => v.tier === 2);
+const tier3Vendors = VENDORS.filter(v => v.tier === 3);
+const tier4Vendors = VENDORS.filter(v => v.tier === 4);
+---
+
+<Layout 
+  title="QMS Landscape Tiers (1 to 4) | Saram Consulting"
+  description="In-depth breakdown of the 4 QMS market tiers: Platform Incumbents, Pure-Play QMS, Vertical Specialists, and AI Disruptors."
+  activePath="/tiers"
+>
+  <main>
+    <section class="hero-text">
+      <h1>Market Tiers Architecture</h1>
+      <p class="hero-subtitle">Structural Taxonomy of the Life Sciences Quality Management Software Ecosystem</p>
+      <p>
+        The QMS market is characterized by stark architectural and commercial boundaries. Organizations that select a system outside their operational sweet spot either face crippling multi-million-dollar customization backlogs or hit architectural ceilings that stall commercial scale.
+      </p>
+      <p>
+        Below is our comprehensive mid-2026 assessment of each tier's strategic role, integration dynamics, regulatory profile, and key vendors.
+      </p>
+    </section>
+
+    <!-- TIER 1 -->
+    <section id="tier-1">
+      <h2 class="section-title">Tier 1 — Platform Incumbents ({tier1Vendors.length} Platforms)</h2>
+      <div class="callout-box">
+        <h3 style="margin-bottom: 6px;">Multi-Application, Strategic, Validated Cloud</h3>
+        <p style="font-size: 13px; margin-bottom: 8px;">
+          <strong>Target Buyers:</strong> Global Top-50 Biopharma, Massive CDMOs, Multi-Site Medical Device Enterprises.
+        </p>
+        <p style="font-size: 13px; line-height: 1.6; margin-bottom: 8px;">
+          Tier 1 platforms are not merely document workflows; they are enterprise data foundations. A single tenant frequently unifies QMS, LIMS, Manufacturing Execution (MES), Batch Release, and Computer Systems Validation. Their value proposition centers on eliminating data silos across clinical development, commercial manufacturing, and supply chain.
+        </p>
+        <div style="font-size: 12px; color: var(--muted-text);">
+          <strong>Key 2026 Shift:</strong> Veeva shipped its Vault Model Context Protocol (MCP) server in August 2026, while MasterControl certified its AI trust layer under ISO/IEC 42001. Both vendors are expanding beyond human-in-the-loop assistants into autonomous agentic workflows.
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        {tier1Vendors.map(vendor => (
+          <VendorCard vendor={vendor} />
+        ))}
+      </div>
+    </section>
+
+    <!-- TIER 2 -->
+    <section id="tier-2">
+      <h2 class="section-title">Tier 2 — Pure-Play QMS ({tier2Vendors.length} Platforms)</h2>
+      <div class="callout-box">
+        <h3 style="margin-bottom: 6px;">Mid-Market Sweet Spot, Cloud-Native, Fast Deployment</h3>
+        <p style="font-size: 13px; margin-bottom: 8px;">
+          <strong>Target Buyers:</strong> Mid-Sized Pharma, Fast-Growing MedTech/SaMD, Clinical-Stage Biotech (Series A through Commercial).
+        </p>
+        <p style="font-size: 13px; line-height: 1.6; margin-bottom: 8px;">
+          Pure-play QMS providers represent the fastest-growing sector of the market. They deliver pre-configured, out-of-the-box GxP workflows (CAPA, Deviations, Change Control, Training) with deployment cycles measured in weeks rather than quarters. Many are built natively on top of hyperscalers or Salesforce, allowing lean quality teams to achieve audit readiness without large internal IT teams.
+        </p>
+        <div style="font-size: 12px; color: var(--muted-text);">
+          <strong>Key 2026 Shift:</strong> Rapid adoption of Agentic Personas (Dot Compliance Dottie AI 5.0) and ISO 42001 certification (Greenlight Guru, June 2026), alongside native LLM connectors for enterprise AI models.
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        {tier2Vendors.map(vendor => (
+          <VendorCard vendor={vendor} />
+        ))}
+      </div>
+    </section>
+
+    <!-- TIER 3 -->
+    <section id="tier-3">
+      <h2 class="section-title">Tier 3 — Vertical & Adjacent Specialists ({tier3Vendors.length} Domains)</h2>
+      <div class="callout-box">
+        <h3 style="margin-bottom: 6px;">Sub-Process Owners & Regulated Workflow Engines</h3>
+        <p style="font-size: 13px; margin-bottom: 8px;">
+          <strong>Target Buyers:</strong> Specialized Departmental Heads (QC Lab, Regulatory Affairs, Validation, Plant Floor, EH&S).
+        </p>
+        <p style="font-size: 13px; line-height: 1.6; margin-bottom: 8px;">
+          No single QMS can natively solve the micro-workflows of specialized life sciences domains. Tier 3 platforms own deep sub-processes that feed directly into the central QMS. Examples include LIMS (sample custody and analytical testing), RIM (eCTD health authority submissions), Validation Suites (Kneat/ValGenesis GAMP 5 and CSA execution), and MES (real-time electronic batch records).
+        </p>
+        <div style="font-size: 12px; color: var(--muted-text);">
+          <strong>Key 2026 Shift:</strong> Convergence of Validation and QMS. With the FDA Computer Software Assurance (CSA) guidance fully operative, paperless validation suites are integrating directly with QMS change controls via real-time REST and MCP endpoints.
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        {tier3Vendors.map(vendor => (
+          <VendorCard vendor={vendor} />
+        ))}
+      </div>
+    </section>
+
+    <!-- TIER 4 -->
+    <section id="tier-4">
+      <h2 class="section-title">Tier 4 — New Entrants & Disruptors ({tier4Vendors.length} Solutions)</h2>
+      <div class="callout-box">
+        <h3 style="margin-bottom: 6px;">AI-Native Architectures & Point Copilots</h3>
+        <p style="font-size: 13px; margin-bottom: 8px;">
+          <strong>Target Buyers:</strong> AI-forward Biologics Startups, High-Velocity CDMOs, Quality Innovation Labs.
+        </p>
+        <p style="font-size: 13px; line-height: 1.6; margin-bottom: 8px;">
+          Tier 4 challengers are building QMS from first principles, treating large language models and autonomous agents as primary system actors rather than bolt-on copilot sidebars. They promise to eliminate manual document routing through automated deviation writing, instant root-cause analysis, and autonomous requirement traceability.
+        </p>
+        <div style="font-size: 12px; color: var(--muted-text);">
+          <strong>Key 2026 Shift:</strong> YC and SNR-backed Seal (seal.run) leads the venture cohort with a 17-capability blueprint, while general enterprise workflow tools like ServiceNow GRC continue attempting inroads without yet possessing validated life-sciences footprints.
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        {tier4Vendors.map(vendor => (
+          <VendorCard vendor={vendor} />
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>

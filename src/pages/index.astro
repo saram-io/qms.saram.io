@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SpotlightBanner from '../components/SpotlightBanner.astro';
+import ComparisonTable from '../components/ComparisonTable.astro';
+import ShortlistMatrix from '../components/ShortlistMatrix.astro';
+import VendorDirectory from '../components/VendorDirectory.astro';
+import { VENDORS } from '../data/vendors';
+
+const tier1Count = VENDORS.filter(v => v.tier === 1).length;
+const tier2Count = VENDORS.filter(v => v.tier === 2).length;
+const tier3Count = VENDORS.filter(v => v.tier === 3).length;
+const tier4Count = VENDORS.filter(v => v.tier === 4).length;
+---
+
+<Layout 
+  title="QMS Vendor Landscape (Mid-2026) | Saram Consulting"
+  description="Comprehensive, verified market research of the Quality Management Systems (QMS) vendor ecosystem, tiered by buyer segment and 2026 AI readiness."
+  activePath="/"
+>
+  <SpotlightBanner />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-text">
+      <h1>QMS Vendor Landscape</h1>
+      <p class="hero-subtitle">Tiered by Buyer Segment, Market Position, and 2026 AI Readiness</p>
+      <p>
+        The life sciences Quality Management System (QMS) landscape is undergoing a once-in-a-generation reconfiguration. Driven by the FDA’s new <strong>Quality Management System Regulation (QMSR)</strong>, accelerating cloud consolidation, and the rapid shift toward <strong>agentic compliance</strong>, quality operations are transforming from static record repositories into proactive intelligence engines.
+      </p>
+      <p>
+        Across enterprise biopharma, medical device manufacturers, and high-velocity CDMOs, quality leaders face diverging paths: consolidate onto multi-application cloud platforms (Tier 1), deploy agile cloud-native pure plays (Tier 2), orchestrate specialized sub-process tools (Tier 3), or pilot next-generation AI-native challengers (Tier 4).
+      </p>
+    </section>
+
+    <!-- 2026 Market Dynamics & Inflection Points -->
+    <section>
+      <h2 class="section-title">2026 Market Dynamics & Inflection Points</h2>
+      <div class="callout-box">
+        <h3 style="margin-bottom: 10px;">Key Verified Industry Developments (Mid-2026):</h3>
+        <ul style="padding-left: 20px; font-size: 13.5px; line-height: 1.75;">
+          <li>
+            <strong>Veeva Vault MCP Server & AI Agents GA:</strong> Veeva Systems (NYSE: VEEV) reached General Availability for Vault AI Agents in December 2025 and officially shipped its Model Context Protocol (MCP) Server in August 2026, enabling agentic orchestration directly atop the validated Vault Quality Cloud.
+          </li>
+          <li>
+            <strong>MasterControl $200M ARR & ISO 42001 Certification:</strong> MasterControl surpassed $200M ARR, unified QMS with shop-floor MES and asset calibration (Qualer acquisition, March 2025), and achieved ISO/IEC 42001 (AI Management System) certification on July 15, 2025, delivering 6 enterprise AI features in 14 months.
+          </li>
+          <li>
+            <strong>Greenlight Guru QMSR Wedge & AI Connector:</strong> Anchoring the MedTech sector with 1,100+ customers, Greenlight Guru shipped its open AI Connector in Q2 2026 (supporting ChatGPT, Claude, Copilot, and Gemini) and secured ISO 42001 certification in June 2026 amid FDA QMSR enforcement.
+          </li>
+          <li>
+            <strong>Agentic Shift: Qualio & Dot Compliance:</strong> Qualio re-architected its product as the "Agentic Compliance Platform" with autonomous regulatory monitoring agents, while Dot Compliance launched Dottie AI Gen 5.0 in April 2026 introducing specialized agentic Personas on Salesforce.
+          </li>
+          <li>
+            <strong>AI-Native Entrants: Seal & Disruptors:</strong> YC and SNR-backed Seal (seal.run) launched its 17-capability AI-native QMS blueprint for biologics and CDMOs, signaling pressure on legacy document-centric workflows.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4 Tiers Architecture -->
+    <section>
+      <h2 class="section-title">Market Architecture: 4 Buyer Tiers</h2>
+      <p>
+        Our research categorizes the vendor landscape into four discrete tiers based on product breadth, strategic integration footprint, and regulatory surface area:
+      </p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 16px 0;">
+        <div style="background: var(--card-bg); padding: 14px; border-radius: 6px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 600; font-family: var(--font-serif); font-size: 16px; margin-bottom: 4px;">Tier 1 ({tier1Count})</div>
+          <div style="font-size: 11px; text-transform: uppercase; color: var(--accent-tag); margin-bottom: 6px;">Platform Incumbents</div>
+          <div style="font-size: 12.5px; color: #333;">Multi-application, strategic, validated cloud suites (Veeva, MasterControl, Honeywell/ETQ, PTC Arena, Siemens, SAP, Oracle).</div>
+        </div>
+
+        <div style="background: var(--card-bg); padding: 14px; border-radius: 6px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 600; font-family: var(--font-serif); font-size: 16px; margin-bottom: 4px;">Tier 2 ({tier2Count})</div>
+          <div style="font-size: 11px; text-transform: uppercase; color: var(--accent-tag); margin-bottom: 6px;">Pure-Play QMS</div>
+          <div style="font-size: 12.5px; color: #333;">Cloud-native mid-market leaders (Greenlight Guru, Qualio, Dot Compliance, ComplianceQuest, Ideagen, Scilife, SimplerQMS, ZenQMS, AssurX, Qualityze, IQVIA).</div>
+        </div>
+
+        <div style="background: var(--card-bg); padding: 14px; border-radius: 6px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 600; font-family: var(--font-serif); font-size: 16px; margin-bottom: 4px;">Tier 3 ({tier3Count})</div>
+          <div style="font-size: 11px; text-transform: uppercase; color: var(--accent-tag); margin-bottom: 6px;">Vertical Specialists</div>
+          <div style="font-size: 12.5px; color: #333;">Sub-process owners: LIMS, RIM, Validation (GAMP 5), PLM / Design Controls, MES / eBR, Safety / Pharmacovigilance, EHS, Training.</div>
+        </div>
+
+        <div style="background: var(--card-bg); padding: 14px; border-radius: 6px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 600; font-family: var(--font-serif); font-size: 16px; margin-bottom: 4px;">Tier 4 ({tier4Count})</div>
+          <div style="font-size: 11px; text-transform: uppercase; color: var(--accent-tag); margin-bottom: 6px;">New Entrants / Disruptors</div>
+          <div style="font-size: 12.5px; color: #333;">AI-native startups and copilots (Seal, Complere, AkelaHub, Extractable, Shoreline AI, OnRamp QA, ServiceNow GRC modules).</div>
+        </div>
+      </div>
+
+      <p style="margin-top: 8px;">
+        <a href="/tiers" class="service-link"><strong>Read detailed tier-by-tier architectural analysis &rarr;</strong></a>
+      </p>
+    </section>
+
+    <!-- Practical Buyer Shortlist Matrix -->
+    <section>
+      <h2 class="section-title">Practical Shortlist by Buyer Segment</h2>
+      <p>
+        Procurement decisions hinge on regulatory scope, manufacturing footprint, and internal IT architecture. Explore proven shortlists tailored to your operating model:
+      </p>
+      
+      <ShortlistMatrix />
+
+      <p style="margin-top: 8px;">
+        <a href="/shortlist" class="service-link"><strong>View full buyer segment evaluation guide & decision matrices &rarr;</strong></a>
+      </p>
+    </section>
+
+    <!-- Platform Comparison Table -->
+    <section>
+      <h2 class="section-title">Platform Incumbent & Pure-Play Comparison</h2>
+      <p>
+        Direct head-to-head comparison of market-leading systems across platform scope, AI maturity, and target buyers:
+      </p>
+      <ComparisonTable />
+    </section>
+
+    <!-- Interactive Directory -->
+    <section>
+      <h2 class="section-title">Interactive Vendor Directory ({VENDORS.length} Tracked Systems)</h2>
+      <p>
+        Search and filter vendors across all 4 tiers, buyer segments, and AI readiness ratings:
+      </p>
+      <VendorDirectory />
+    </section>
+
+    <!-- Advisory & Contact -->
+    <section>
+      <h2 class="section-title">QMS Selection & AI Governance Advisory</h2>
+      <p>
+        Saram Consulting provides vendor-neutral IT advisory and software engineering for life science, biotech, and MedTech leaders. We assist organizations with:
+      </p>
+      <ul style="padding-left: 20px; margin-bottom: 16px; font-size: 13.5px; line-height: 1.7;">
+        <li><strong>Vendor Benchmarking:</strong> Objective evaluation and RFP management (Veeva vs MasterControl vs Qualio vs Greenlight Guru).</li>
+        <li><strong>FDA QMSR Readiness:</strong> Aligning Medical Device quality operations with ISO 13485 under the revised 21 CFR Part 820.</li>
+        <li><strong>ISO 42001 & AI Validation:</strong> Structuring AI governance, Model Context Protocol (MCP) pipelines, and 21 CFR Part 11 validation for LLMs.</li>
+        <li><strong>System Migration:</strong> Extracting legacy data from on-premise TrackWise or SharePoint into modern cloud eQMS architectures.</li>
+      </ul>
+      <p>
+        Email: <a href="mailto:info@saram.consulting" class="service-link">info@saram.consulting</a><br />
+        Phone: <a href="tel:+19253946606" class="service-link">925-394-6606</a><br />
+        Multi-Agent Architecture: <a href="https://saram.io/framework" target="_blank" rel="noopener" class="service-link">GxP AI Agent Framework &rarr;</a>
+      </p>
+    </section>
+  </main>
+</Layout>

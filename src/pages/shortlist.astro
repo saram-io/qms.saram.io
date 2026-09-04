@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { BUYER_SHORTLISTS } from '../data/shortlists';
+---
+
+<Layout 
+  title="Practical QMS Shortlist by Buyer Segment (2026) | Saram Consulting"
+  description="Practical QMS buyer shortlists for Big-Pharma, Mid-Pharma, MedTech, CDMOs, Emerging Biotech, and Dietary Supplements."
+  activePath="/shortlist"
+>
+  <main>
+    <section class="hero-text">
+      <h1>Practical QMS Shortlist by Buyer Segment</h1>
+      <p class="hero-subtitle">Procurement Roadmaps, Evaluation Criteria, and Risk Analysis</p>
+      <p>
+        One size never fits all in regulated quality management. A tier-1 global platform suited for a 40-site pharmaceutical conglomerate will suffocate a 25-person clinical biotech. Conversely, lightweight document repositories will trigger regulatory observations when subjected to FDA QMSR or commercial CDMO multi-tenant audits.
+      </p>
+      <p>
+        This practical shortlist reflects verified customer deployments, technical benchmarks, and market consensus as of mid-2026.
+      </p>
+    </section>
+
+    <!-- Quick Reference Table -->
+    <section>
+      <h2 class="section-title">Segment Shortlist Overview</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Buyer Segment</th>
+              <th>Recommended Primary Shortlist</th>
+              <th>Core Decision Drivers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Big-Pharma</strong></td>
+              <td>Veeva Systems, Honeywell (ETQ), SAP QM, Oracle, Siemens Opcenter</td>
+              <td>Multi-site data governance, unified clinical-to-commercial platform, global health authority audit defense.</td>
+            </tr>
+            <tr>
+              <td><strong>Mid-Pharma</strong></td>
+              <td>MasterControl, Qualio, Veeva Systems, Dot Compliance</td>
+              <td>Rapid time-to-value, pre-validated GxP workflows, integrated MES, autonomous agentic compliance.</td>
+            </tr>
+            <tr>
+              <td><strong>Med Device / MedTech</strong></td>
+              <td>Greenlight Guru, PTC (Arena), Veeva + Product Surveillance</td>
+              <td>FDA QMSR alignment (ISO 13485 + Part 820), Design History File (DHF) CAD traceability, ISO 14971 risk matrix.</td>
+            </tr>
+            <tr>
+              <td><strong>CDMOs & CMOs</strong></td>
+              <td>Veeva Systems, MasterControl, Seal (seal.run)</td>
+              <td>Multi-sponsor data partitioning, electronic batch record (eBR) execution, release-by-exception velocity.</td>
+            </tr>
+            <tr>
+              <td><strong>Biotech / Emerging</strong></td>
+              <td>Qualio, Veeva Quality Basics, Dot Compliance</td>
+              <td>Turnkey pre-configured validation, low administrative burden, seamless scale through IND and Phase II.</td>
+            </tr>
+            <tr>
+              <td><strong>Supplements & Food</strong></td>
+              <td>Honeywell (ETQ Reliance), SafetyChain, SafetyCulture</td>
+              <td>FDA FSMA and GFSI/SQF standards, mobile frontline plant checklists, supplier ingredient verification.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- In-Depth Segment Breakdown -->
+    <section>
+      <h2 class="section-title">Detailed Segment Analysis</h2>
+
+      <div style="display: flex; flex-direction: column; gap: 28px; margin-top: 16px;">
+        {BUYER_SHORTLISTS.map(segment => (
+          <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 6px; padding: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+              <h3 style="font-family: var(--font-serif); font-size: 20px; color: #000;">{segment.name}</h3>
+              <span style="font-size: 11px; text-transform: uppercase; color: var(--accent-tag); font-weight: 600;">Buyer Blueprint</span>
+            </div>
+            
+            <p style="font-size: 13px; color: var(--muted-text); margin-bottom: 14px;">
+              {segment.subtitle}
+            </p>
+
+            <div style="margin-bottom: 16px;">
+              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; margin-bottom: 6px; color: #111;">
+                Primary Recommended Shortlist:
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 6px;">
+                {segment.recommendedVendors.map(vendor => (
+                  <div style="background: #ffffff66; padding: 8px 12px; border-radius: 4px; border: 1px solid #00000010; font-size: 12.5px;">
+                    <strong>{vendor.name}:</strong> {vendor.note}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 12px; font-size: 12.5px;">
+              <div style="background: #ffffff44; padding: 12px; border-radius: 4px;">
+                <strong style="display: block; margin-bottom: 6px; color: #111;">Essential Selection Criteria:</strong>
+                <ul style="padding-left: 18px; line-height: 1.55;">
+                  {segment.selectionCriteria.map(c => (
+                    <li>{c}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div style="background: #ffffff44; padding: 12px; border-radius: 4px;">
+                <strong style="display: block; margin-bottom: 6px; color: #822;">Common Traps & Watch-Outs:</strong>
+                <ul style="padding-left: 18px; line-height: 1.55; color: #444;">
+                  {segment.watchOuts.map(w => (
+                    <li>{w}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Key Questions for RFPs -->
+    <section>
+      <h2 class="section-title">5 Critical Questions to Include in Your 2026 QMS RFP</h2>
+      <div class="callout-box">
+        <ol style="padding-left: 20px; font-size: 13.5px; line-height: 1.8;">
+          <li>
+            <strong>AI Validation & 21 CFR Part 11:</strong> Does your AI architecture rely on an open-weight foundation model or external APIs? Has your AI Management System been third-party certified under <strong>ISO/IEC 42001</strong>, and are prompt-to-response audit trails immutable?
+          </li>
+          <li>
+            <strong>Model Context Protocol (MCP) Support:</strong> Do you expose read/write MCP servers or open REST APIs, allowing our enterprise AI agents (e.g. Claude, GPT, internal agents) to interact securely with your document and deviation workflows?
+          </li>
+          <li>
+            <strong>FDA QMSR Readiness (for MedTech):</strong> Does your platform enforce the revised 21 CFR Part 820 harmonized with ISO 13485:2016 natively, or does it require manual custom scripting?
+          </li>
+          <li>
+            <strong>Total Cost of Validation:</strong> What percentage of the initial setup and annual recurring fees is dedicated to Computer Software Assurance (CSA) automated testing packages versus manual service billings?
+          </li>
+          <li>
+            <strong>Data Portability & Exit Rights:</strong> Can all quality records, audit trails, and version histories be exported in standard formats (JSON/PDF/XML) without proprietary lock-in if we transition platforms?
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+</Layout>
