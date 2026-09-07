@@ -1,0 +1,497 @@
+---
+import { LATEST_NEWS, type NewsItem } from '../data/news';
+
+interface Props {
+  limit?: number;
+  showFilters?: boolean;
+}
+
+const { limit, showFilters = true } = Astro.props;
+
+const newsList = limit ? LATEST_NEWS.slice(0, limit) : LATEST_NEWS;
+const categories = ['All', ...Array.from(new Set(LATEST_NEWS.map(item => item.category)))];
+---
+
+<div class="latest-news-container">
+  <div class="news-header">
+    <div>
+      <div class="news-badge-label">
+        <span class="pulse-dot"></span>
+        Verified Intelligence Wire (Mid-2026)
+      </div>
+      <h2 class="section-title" style="margin-top: 6px; margin-bottom: 8px;">Latest QMS & Regulatory News</h2>
+      <p class="news-subtitle">
+        Independent coverage of FDA QMSR enforcement, ISO 42001 certifications, MCP server releases, and enterprise M&A.
+      </p>
+    </div>
+  </div>
+
+  {showFilters && (
+    <div class="news-filter-bar">
+      <div class="filter-pills" id="newsFilterPills">
+        <span class="filter-pill-label">Filter:</span>
+        {categories.map((cat, idx) => {
+          const count = cat === 'All' ? LATEST_NEWS.length : LATEST_NEWS.filter(n => n.category === cat).length;
+          return (
+            <button 
+              type="button" 
+              class={`filter-btn ${idx === 0 ? 'active' : ''}`} 
+              data-news-category={cat}
+            >
+              {cat} ({count})
+            </button>
+          );
+        })}
+      </div>
+      <div class="news-count-display" id="newsCountDisplay">
+        Showing {newsList.length} updates
+      </div>
+    </div>
+  )}
+
+  <div class="news-grid" id="newsCardsGrid">
+    {newsList.map((item) => (
+      <article 
+        class={`news-card ${item.featured ? 'is-featured' : ''}`}
+        data-category={item.category}
+      >
+        <div class="news-card-meta">
+          <div class="meta-left">
+            <span class="news-category-tag">{item.category}</span>
+            <span class="news-date">{item.date}</span>
+          </div>
+          {item.badge && (
+            <span class={`news-status-badge badge-${item.badge.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}>
+              {item.badge}
+            </span>
+          )}
+        </div>
+
+        <h3 class="news-card-title">
+          <a href={item.url}>{item.title}</a>
+        </h3>
+
+        <div class="news-card-source">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span>{item.source}</span>
+        </div>
+
+        <p class="news-card-summary">
+          {item.summary}
+        </p>
+
+        <div class="news-card-footer">
+          <a href={item.url} class="news-action-link">
+            <span>{item.linkText || 'Read Details'}</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <div id="noNewsMatch" style="display: none; padding: 32px; text-align: center; background: var(--card-bg); border-radius: 6px; border: 1px dashed var(--card-border); margin-top: 14px;">
+    <p style="font-size: 13px; color: var(--muted-text); margin-bottom: 8px;">No news items found under this category filter.</p>
+    <button type="button" class="filter-btn active" id="resetNewsFilterBtn">Show All News</button>
+  </div>
+
+  <!-- Companion Wire Banner -->
+  <div class="news-wire-banner">
+    <div class="wire-banner-content">
+      <div class="wire-banner-title">
+        <span class="live-dot"></span>
+        <strong>Live Regulatory Feed: OpenBio News</strong>
+      </div>
+      <p class="wire-banner-desc">
+        Tracking real-time health authority inspections, FDA 483 warning letters, ISO 13485 audits, and biopharma compliance alerts across 1,000+ sources.
+      </p>
+    </div>
+    <div class="wire-banner-actions">
+      <a href="https://openbionews.com" target="_blank" rel="noopener" class="wire-btn-primary">
+        OpenBio News Wire &rarr;
+      </a>
+      <a href="/ai-trends" class="wire-btn-secondary">
+        2026 AI Trends &rarr;
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .latest-news-container {
+    margin: 8px 0;
+  }
+
+  .news-header {
+    margin-bottom: 16px;
+  }
+
+  .news-badge-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #1b5e20;
+    margin-bottom: 2px;
+  }
+
+  .pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #1b5e20;
+    box-shadow: 0 0 0 0 rgba(27, 94, 32, 0.4);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(27, 94, 32, 0.6);
+    }
+    70% {
+      box-shadow: 0 0 0 6px rgba(27, 94, 32, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(27, 94, 32, 0);
+    }
+  }
+
+  .news-subtitle {
+    font-size: 13.5px;
+    color: var(--muted-text);
+    line-height: 1.5;
+    max-width: 800px;
+    margin-bottom: 0;
+  }
+
+  .news-filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--underline-color);
+  }
+
+  .news-count-display {
+    font-size: 11.5px;
+    color: var(--muted-text);
+    font-family: var(--font-mono);
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 16px;
+  }
+
+  @media (max-width: 640px) {
+    .news-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .news-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  }
+
+  .news-card:hover {
+    background: var(--card-hover-bg);
+    border-color: #00000033;
+    transform: translateY(-2px);
+  }
+
+  .news-card.is-featured {
+    border-left: 3px solid #1b5e20;
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.03) 0%, rgba(235, 234, 226, 1) 100%);
+  }
+
+  .news-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+
+  .meta-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .news-category-tag {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 10.5px;
+    color: var(--accent-tag);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .news-date {
+    color: var(--muted-text);
+    font-size: 11px;
+  }
+
+  .news-date::before {
+    content: "•";
+    margin-right: 8px;
+    opacity: 0.5;
+  }
+
+  .news-status-badge {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 3px;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    background: #00000010;
+    color: #333;
+  }
+
+  .badge-ga-release {
+    background: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+  }
+
+  .badge-regulatory-watch {
+    background: #fff3e0;
+    color: #e65100;
+    border: 1px solid #ffe0b2;
+  }
+
+  .badge-iso-42001 {
+    background: #e3f2fd;
+    color: #0d47a1;
+    border: 1px solid #bbdefb;
+  }
+
+  .badge-benchmark {
+    background: #ede7f6;
+    color: #4a148c;
+    border: 1px solid #d1c4e9;
+  }
+
+  .news-card-title {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    letter-spacing: -0.2px;
+  }
+
+  .news-card-title a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .news-card-title a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--underline-hover);
+  }
+
+  .news-card-source {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: var(--muted-text);
+    margin-bottom: 10px;
+  }
+
+  .news-card-summary {
+    font-size: 12.5px;
+    color: #2b2a26;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+
+  .news-card-footer {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 10px;
+    border-top: 1px solid #00000010;
+  }
+
+  .news-action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: gap 0.2s ease;
+  }
+
+  .news-action-link:hover {
+    gap: 9px;
+    text-decoration: underline;
+  }
+
+  /* Companion Wire Banner */
+  .news-wire-banner {
+    margin-top: 20px;
+    padding: 14px 18px;
+    background: #ffffff55;
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .wire-banner-content {
+    flex: 1;
+    min-width: 260px;
+  }
+
+  .wire-banner-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: #111;
+    margin-bottom: 4px;
+  }
+
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #d32f2f;
+  }
+
+  .wire-banner-desc {
+    font-size: 12px;
+    color: var(--muted-text);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .wire-banner-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .wire-btn-primary {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+  }
+
+  .wire-btn-primary:hover {
+    opacity: 0.85;
+  }
+
+  .wire-btn-secondary {
+    background: transparent;
+    color: var(--text-color);
+    text-decoration: underline 1px;
+    text-decoration-color: var(--underline-color);
+    font-size: 12px;
+    padding: 7px 10px;
+    white-space: nowrap;
+  }
+
+  .wire-btn-secondary:hover {
+    text-decoration-color: var(--underline-hover);
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    function initNewsFilters() {
+      const container = document.querySelector('.latest-news-container');
+      if (!container) return;
+
+      const buttons = container.querySelectorAll('#newsFilterPills .filter-btn');
+      const cards = container.querySelectorAll('#newsCardsGrid .news-card');
+      const countDisplay = container.querySelector('#newsCountDisplay');
+      const noMatch = container.querySelector('#noNewsMatch');
+      const resetBtn = container.querySelector('#resetNewsFilterBtn');
+
+      function filterCategory(category) {
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (category === 'All' || cardCat === category) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (countDisplay) {
+          countDisplay.textContent = `Showing ${visibleCount} updates`;
+        }
+
+        if (noMatch) {
+          noMatch.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        buttons.forEach(b => {
+          if (b.getAttribute('data-news-category') === category) {
+            b.classList.add('active');
+          } else {
+            b.classList.remove('active');
+          }
+        });
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const category = btn.getAttribute('data-news-category') || 'All';
+          filterCategory(category);
+        });
+      });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          filterCategory('All');
+        });
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initNewsFilters);
+    } else {
+      initNewsFilters();
+    }
+  })();
+</script>

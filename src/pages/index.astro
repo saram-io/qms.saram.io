@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SpotlightBanner from '../components/SpotlightBanner.astro';
+import LatestNews from '../components/LatestNews.astro';
 import ComparisonTable from '../components/ComparisonTable.astro';
 import ShortlistMatrix from '../components/ShortlistMatrix.astro';
 import VendorDirectory from '../components/VendorDirectory.astro';
@@ -32,29 +33,9 @@ const tier4Count = VENDORS.filter(v => v.tier === 4).length;
       </p>
     </section>
 
-    <!-- 2026 Market Dynamics & Inflection Points -->
+    <!-- Latest Industry & Regulatory News Section -->
     <section>
-      <h2 class="section-title">2026 Market Dynamics & Inflection Points</h2>
-      <div class="callout-box">
-        <h3 style="margin-bottom: 10px;">Key Verified Industry Developments (Mid-2026):</h3>
-        <ul style="padding-left: 20px; font-size: 13.5px; line-height: 1.75;">
-          <li>
-            <strong>Veeva Vault MCP Server & AI Agents GA:</strong> Veeva Systems (NYSE: VEEV) reached General Availability for Vault AI Agents in December 2025 and officially shipped its Model Context Protocol (MCP) Server in August 2026, enabling agentic orchestration directly atop the validated Vault Quality Cloud.
-          </li>
-          <li>
-            <strong>MasterControl $200M ARR & ISO 42001 Certification:</strong> MasterControl surpassed $200M ARR, unified QMS with shop-floor MES and asset calibration (Qualer acquisition, March 2025), and achieved ISO/IEC 42001 (AI Management System) certification on July 15, 2025, delivering 6 enterprise AI features in 14 months.
-          </li>
-          <li>
-            <strong>Greenlight Guru QMSR Wedge & AI Connector:</strong> Anchoring the MedTech sector with 1,100+ customers, Greenlight Guru shipped its open AI Connector in Q2 2026 (supporting ChatGPT, Claude, Copilot, and Gemini) and secured ISO 42001 certification in June 2026 amid FDA QMSR enforcement.
-          </li>
-          <li>
-            <strong>Agentic Shift: Qualio & Dot Compliance:</strong> Qualio re-architected its product as the "Agentic Compliance Platform" with autonomous regulatory monitoring agents, while Dot Compliance launched Dottie AI Gen 5.0 in April 2026 introducing specialized agentic Personas on Salesforce.
-          </li>
-          <li>
-            <strong>AI-Native Entrants: Seal & Disruptors:</strong> YC and SNR-backed Seal (seal.run) launched its 17-capability AI-native QMS blueprint for biologics and CDMOs, signaling pressure on legacy document-centric workflows.
-          </li>
-        </ul>
-      </div>
+      <LatestNews />
     </section>
 
     <!-- Walled Garden & MCP Tracker Feature Banner -->
