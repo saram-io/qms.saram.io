@@ -2,12 +2,38 @@
 import Layout from '../layouts/Layout.astro';
 import VendorDirectory from '../components/VendorDirectory.astro';
 import { VENDORS } from '../data/vendors';
+const vendorListSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://qms.saram.io/vendors#collection",
+  "name": "Complete QMS Vendor Directory (2026)",
+  "description": "Search and filter all tracked Quality Management Systems (QMS) across all 4 market tiers, deployment types, and AI capabilities.",
+  "url": "https://qms.saram.io/vendors",
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Tracked Life Sciences QMS Vendors",
+    "numberOfItems": VENDORS.length,
+    "itemListElement": VENDORS.map((v, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 1,
+      "name": `${v.name} - ${v.product}`,
+      "description": v.summary,
+      "url": v.website || `https://qms.saram.io/tiers#tier-${v.tier}`
+    }))
+  }
+};
+
+const breadcrumbs = [
+  { name: 'Vendor Directory', path: '/vendors' }
+];
 ---
 
 <Layout 
   title="Complete QMS Vendor Directory (2026) | Saram Consulting"
   description="Search and filter all tracked Quality Management Systems (QMS) across all 4 market tiers, deployment types, and AI capabilities."
   activePath="/vendors"
+  breadcrumbs={breadcrumbs}
+  customSchema={vendorListSchema}
 >
   <main>
     <section class="hero-text">

@@ -1,12 +1,90 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { BUYER_SHORTLISTS } from '../data/shortlists';
+
+const shortlistArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://qms.saram.io/shortlist#article",
+  "headline": "Practical QMS Shortlist by Buyer Segment (2026)",
+  "description": "Practical QMS buyer shortlists for Big-Pharma, Mid-Pharma, MedTech, CDMOs, Emerging Biotech, and Dietary Supplements.",
+  "url": "https://qms.saram.io/shortlist",
+  "datePublished": "2026-06-02",
+  "dateModified": "2026-09-06",
+  "inLanguage": "en-US",
+  "author": {
+    "@id": "https://saram.io/#organization"
+  },
+  "publisher": {
+    "@id": "https://saram.io/#organization"
+  },
+  "about": [
+    { "@type": "Thing", "name": "Quality Management Systems" },
+    { "@type": "Thing", "name": "Software Procurement" },
+    { "@type": "Thing", "name": "FDA QMSR" }
+  ]
+};
+
+const shortlistFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://qms.saram.io/shortlist#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How should AI validation and 21 CFR Part 11 be evaluated in a QMS RFP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask if the AI architecture relies on open-weight foundation models or external APIs, whether the AI Management System has been third-party certified under ISO/IEC 42001, and if prompt-to-response audit trails are immutable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Model Context Protocol (MCP) capability should be requested in a QMS RFP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verify whether the vendor exposes read/write MCP servers or open REST APIs, allowing enterprise AI agents (Claude, GPT, internal agents) to interact securely with document and deviation workflows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should MedTech buyers assess FDA QMSR readiness?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verify whether the platform enforces the revised 21 CFR Part 820 harmonized with ISO 13485:2016 natively, or requires manual custom scripting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do buyers measure the Total Cost of Validation under CSA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Determine what percentage of initial setup and annual recurring fees is dedicated to Computer Software Assurance (CSA) automated testing packages versus manual service billings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What data portability and exit rights must be negotiated in a QMS contract?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Confirm that all quality records, audit trails, and version histories can be exported in open standard formats (JSON/PDF/XML) without proprietary lock-in if transitioning platforms."
+      }
+    }
+  ]
+};
+
+const breadcrumbs = [
+  { name: 'Buyer Shortlist', path: '/shortlist' }
+];
 ---
 
 <Layout 
   title="Practical QMS Shortlist by Buyer Segment (2026) | Saram Consulting"
   description="Practical QMS buyer shortlists for Big-Pharma, Mid-Pharma, MedTech, CDMOs, Emerging Biotech, and Dietary Supplements."
   activePath="/shortlist"
+  pageType="article"
+  breadcrumbs={breadcrumbs}
+  customSchema={[shortlistArticleSchema, shortlistFaqSchema]}
 >
   <main>
     <section class="hero-text">

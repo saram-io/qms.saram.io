@@ -3,33 +3,102 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+interface Breadcrumb {
+  name: string;
+  path: string;
+}
+
 interface Props {
   title?: string;
   description?: string;
   canonicalUrl?: string;
   activePath?: string;
+  pageType?: 'website' | 'article';
+  breadcrumbs?: Breadcrumb[];
+  customSchema?: Record<string, any> | Record<string, any>[];
 }
 
 const {
   title = "QMS Vendor Landscape & Buyer Research (2026) | Saram Consulting",
   description = "Independent market intelligence, 4-tier classification, buyer segment shortlists, and 2026 AI milestones for enterprise Quality Management Systems in Life Sciences.",
-  canonicalUrl = Astro.url.href,
-  activePath = Astro.url.pathname
+  activePath = Astro.url.pathname,
+  pageType = 'website',
+  breadcrumbs,
+  customSchema
 } = Astro.props;
 
-const structuredSchema = {
+const siteUrl = (Astro.site ? Astro.site.origin : 'https://qms.saram.io').replace(/\/$/, '');
+const cleanPath = Astro.url.pathname.replace(/\/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, '') || '';
+const calculatedCanonical = cleanPath === '' ? `${siteUrl}/` : `${siteUrl}${cleanPath}`;
+const canonicalUrl = Astro.props.canonicalUrl || calculatedCanonical;
+const ogImage = `${siteUrl}/og.png`;
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://saram.io/#organization",
+  "name": "Saram Consulting",
+  "url": "https://saram.io",
+  "logo": `${siteUrl}/logo.png`,
+  "image": ogImage,
+  "description": "Independent life sciences GxP IT advisory, QMS vendor benchmarking, and compliance AI architecture.",
+  "email": "info@saram.consulting",
+  "telephone": "+1-925-394-6606",
+  "sameAs": [
+    "https://saram.io",
+    "https://gxpchat.com",
+    "https://csv.saram.io",
+    "https://gxpsoft.ai"
+  ],
+  "knowsAbout": [
+    "Quality Management Systems (QMS)",
+    "FDA QMSR (21 CFR Part 820)",
+    "ISO 13485:2016",
+    "FDA 21 CFR Part 11 & EU Annex 11",
+    "ISO/IEC 42001 (AI Management Systems)",
+    "Computer Software Assurance (CSA)",
+    "Model Context Protocol (MCP)"
+  ]
+};
+
+const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
   "name": "Saram QMS Vendor Intelligence",
-  "url": "https://qms.saram.io",
+  "url": siteUrl,
   "description": description,
+  "inLanguage": "en-US",
   "publisher": {
-    "@type": "ProfessionalService",
-    "name": "Saram Consulting",
-    "url": "https://saram.io",
-    "logo": "https://saram.io/logo.png"
+    "@id": "https://saram.io/#organization"
   }
 };
+
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": `${siteUrl}/`
+    },
+    ...breadcrumbs.map((b, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 2,
+      "name": b.name,
+      "item": b.path.startsWith('http') ? b.path : `${siteUrl}${b.path.startsWith('/') ? '' : '/'}${b.path}`
+    }))
+  ]
+} : null;
+
+const schemasToRender = [
+  organizationSchema,
+  websiteSchema,
+  breadcrumbSchema,
+  ...(Array.isArray(customSchema) ? customSchema : customSchema ? [customSchema] : [])
+].filter(Boolean);
 ---
 
 <!doctype html>
@@ -41,14 +110,26 @@ const structuredSchema = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Crawlers & Indexing -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={pageType} />
     <meta property="og:site_name" content="Saram Consulting | QMS Intelligence" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://saram.io/og.png" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
@@ -56,7 +137,8 @@ const structuredSchema = {
     <meta name="twitter:url" content={canonicalUrl} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://saram.io/og.png" />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={title} />
 
     <meta name="theme-color" content="#f5f4ef" />
 
@@ -69,7 +151,9 @@ const structuredSchema = {
     />
 
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(structuredSchema)} />
+    {schemasToRender.map((s) => (
+      <script type="application/ld+json" set:html={JSON.stringify(s)} />
+    ))}
   </head>
   <body>
     <div class="container">

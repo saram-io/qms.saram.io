@@ -1,11 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const aiTrendsArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://qms.saram.io/ai-trends#article",
+  "headline": "2026 AI Trends in Life Sciences QMS: ISO 42001, MCP, and Agentic Compliance",
+  "description": "Analysis of 2026 AI inflection points in QMS: ISO 42001 certification, Model Context Protocol (MCP), and agentic compliance architectures.",
+  "url": "https://qms.saram.io/ai-trends",
+  "datePublished": "2026-06-02",
+  "dateModified": "2026-09-06",
+  "inLanguage": "en-US",
+  "author": {
+    "@id": "https://saram.io/#organization"
+  },
+  "publisher": {
+    "@id": "https://saram.io/#organization"
+  },
+  "about": [
+    { "@type": "Thing", "name": "Artificial Intelligence" },
+    { "@type": "Thing", "name": "ISO/IEC 42001" },
+    { "@type": "Thing", "name": "Model Context Protocol (MCP)" },
+    { "@type": "Thing", "name": "21 CFR Part 11" }
+  ]
+};
+
+const breadcrumbs = [
+  { name: '2026 AI Trends', path: '/ai-trends' }
+];
 ---
 
 <Layout 
   title="2026 AI Trends & Milestones in Life Sciences QMS | Saram Consulting"
   description="Analysis of 2026 AI inflection points in QMS: ISO 42001 certification, Model Context Protocol (MCP), and agentic compliance architectures."
   activePath="/ai-trends"
+  pageType="article"
+  breadcrumbs={breadcrumbs}
+  customSchema={aiTrendsArticleSchema}
 >
   <main>
     <section class="hero-text">

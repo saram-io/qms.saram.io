@@ -1,11 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://qms.saram.io/about#page",
+  "name": "Research Methodology & About Saram",
+  "description": "About the QMS Vendor Landscape research initiative, verification methodology, sources, and Saram Consulting GxP advisory.",
+  "url": "https://qms.saram.io/about",
+  "mainEntity": {
+    "@id": "https://saram.io/#organization"
+  }
+};
+
+const breadcrumbs = [
+  { name: 'Methodology & About', path: '/about' }
+];
 ---
 
 <Layout 
   title="Methodology & Advisory Services | Saram Consulting"
   description="About the QMS Vendor Landscape research initiative, verification methodology, sources, and Saram Consulting GxP advisory."
   activePath="/about"
+  breadcrumbs={breadcrumbs}
+  customSchema={aboutPageSchema}
 >
   <main>
     <section class="hero-text">

@@ -7,12 +7,42 @@ const tier1Vendors = VENDORS.filter(v => v.tier === 1);
 const tier2Vendors = VENDORS.filter(v => v.tier === 2);
 const tier3Vendors = VENDORS.filter(v => v.tier === 3);
 const tier4Vendors = VENDORS.filter(v => v.tier === 4);
+
+const tiersArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://qms.saram.io/tiers#article",
+  "headline": "QMS Landscape Tiers (1 to 4): Structural Taxonomy",
+  "description": "In-depth breakdown of the 4 QMS market tiers: Platform Incumbents, Pure-Play QMS, Vertical Specialists, and AI Disruptors.",
+  "url": "https://qms.saram.io/tiers",
+  "datePublished": "2026-06-02",
+  "dateModified": "2026-09-06",
+  "inLanguage": "en-US",
+  "author": {
+    "@id": "https://saram.io/#organization"
+  },
+  "publisher": {
+    "@id": "https://saram.io/#organization"
+  },
+  "about": [
+    { "@type": "Thing", "name": "Quality Management Systems" },
+    { "@type": "Thing", "name": "Software Architecture" },
+    { "@type": "Thing", "name": "Life Sciences IT" }
+  ]
+};
+
+const breadcrumbs = [
+  { name: 'Landscape Tiers', path: '/tiers' }
+];
 ---
 
 <Layout 
   title="QMS Landscape Tiers (1 to 4) | Saram Consulting"
   description="In-depth breakdown of the 4 QMS market tiers: Platform Incumbents, Pure-Play QMS, Vertical Specialists, and AI Disruptors."
   activePath="/tiers"
+  pageType="article"
+  breadcrumbs={breadcrumbs}
+  customSchema={tiersArticleSchema}
 >
   <main>
     <section class="hero-text">

@@ -1,12 +1,91 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import AiReadinessTracker from '../components/AiReadinessTracker.astro';
+
+const trackerArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://qms.saram.io/ai-readiness-tracker#article",
+  "headline": "QMS AI Readiness & Open Data Tracker: Walled Gardens vs MCP",
+  "description": "Independent tracker benchmarking life sciences QMS vendors on AI readiness, walled garden lock-in, Model Context Protocol (MCP) servers, and open API data access.",
+  "url": "https://qms.saram.io/ai-readiness-tracker",
+  "datePublished": "2026-06-02",
+  "dateModified": "2026-09-06",
+  "inLanguage": "en-US",
+  "author": {
+    "@id": "https://saram.io/#organization"
+  },
+  "publisher": {
+    "@id": "https://saram.io/#organization"
+  },
+  "about": [
+    { "@type": "Thing", "name": "Model Context Protocol (MCP)" },
+    { "@type": "Thing", "name": "Quality Management Systems" },
+    { "@type": "Thing", "name": "21 CFR Part 11" },
+    { "@type": "Thing", "name": "ISO/IEC 42001" }
+  ]
+};
+
+const trackerFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://qms.saram.io/ai-readiness-tracker#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How should enterprise buyers specify Model Context Protocol (MCP) support in QMS RFPs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buyers should mandate: 'Does the vendor provide a validated MCP Server or an open roadmap commitment with documented developer sandbox access?' The acceptable response is: 'Production MCP server available with OAuth 2.0 Part 11 compliant scopes and token-based record access.'"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the BYO-AI clause for avoiding QMS vendor lock-in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mandate that the organization can connect external AI agents (Anthropic Claude, OpenAI GPT-4o, internal LLMs) to QMS data without paying per-seat copilot surcharges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are real-time event webhooks required for agentic compliance in life sciences QMS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Agentic compliance requires reactive triggers: when a cleanroom excursion or batch deviation is logged, an agent must immediately wake up to triage SOPs rather than relying on slow, expensive batch polling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does 21 CFR Part 11 apply to programmatic AI agent actions in a QMS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All agentic queries, automated drafts, and tool calls must be immutably recorded in an append-only audit trail capturing agent ID, model version, prompt hash, and human supervisor electronic signature verification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What API throughput limits should be negotiated for multi-agent QMS operations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A minimum of 100 requests/sec per tenant with burst capability and zero paywalled data extraction fees to allow autonomous multi-agent document analysis across tens of thousands of active records."
+      }
+    }
+  ]
+};
+
+const breadcrumbs = [
+  { name: 'AI & MCP Tracker', path: '/ai-readiness-tracker' }
+];
 ---
 
 <Layout 
   title="QMS AI Readiness & Open Data Tracker | Walled Gardens vs MCP | Saram Consulting"
   description="Independent tracker benchmarking life sciences QMS vendors on AI readiness, walled garden lock-in, Model Context Protocol (MCP) servers, and open API data access."
   activePath="/ai-readiness-tracker"
+  pageType="article"
+  breadcrumbs={breadcrumbs}
+  customSchema={[trackerArticleSchema, trackerFaqSchema]}
 >
   <main>
     <section class="hero-text">
