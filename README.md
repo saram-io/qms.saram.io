@@ -18,7 +18,8 @@ Based on empirical data from the mid-2026 durable knowledge bank, systems are cl
 *Multi-application, strategic, validated cloud suites dominating global enterprise biopharma.*
 - **Veeva Systems (NYSE: VEEV)**: Vault Quality Cloud / QualityOne. Unifies QMS, LIMS, Batch Release, Validation Management, and Training. AI Agents GA Dec 2025; Model Context Protocol (MCP) Server GA Aug 2026.
 - **MasterControl**: $200M ARR platform combining QMS, MES, and asset calibration (Qualer acq. Mar 2025). Certified under ISO/IEC 42001 (AI Management System) in July 2025. FedRAMP authorized.
-- **Honeywell (ETQ)**: ETQ Reliance (acq. Sept 2021). Strong in mid/large manufacturing & process industries, with Honeywell Forge IIoT plant sensor integration.
+- **Honeywell (Sparta Systems)**: TrackWise & TrackWise Digital (acq. Dec 2020 for $1.3B). Dominant legacy enterprise biopharma QMS standard with cloud TrackWise Digital (Salesforce) and Honeywell Forge predictive plant analytics.
+- **Hexagon (ETQ)**: ETQ Reliance (acq. Apr 2022 for $1.2B). Strong in mid/large manufacturing & process industries, featuring Hexagon Manufacturing Intelligence sensor integration and 40+ modular quality apps.
 - **PTC (Arena Solutions)**: PLM-centric QMS (acq. 2021). Dominates discrete medical device hardware, Design History Files (DHF), and engineering change orders.
 - **Siemens (Opcenter)**: Closed-loop manufacturing operations management (MOM / MES) suite for large-scale discrete and process manufacturers.
 - **SAP (S/4HANA QM)**: Embedded directly into the ERP core; the standard when enterprise IT consolidation supersedes standalone QMS tooling.
@@ -36,7 +37,10 @@ Based on empirical data from the mid-2026 durable knowledge bank, systems are cl
 - **ZenQMS**: Audit-ready, all-inclusive pricing eQMS for clinical biotechs and testing facilities.
 - **AssurX**: 25+ year configurable workflow engine across life sciences and high-precision manufacturing.
 - **Qualityze**: Salesforce-native modular EQMS for regulated manufacturers.
-- **IQVIA Quality Compliance**: Grounded in world-leading CRO clinical data, pharmacovigilance, and post-marketing surveillance.
+- **IQVIA (SmartSolve)**: Built on Pilgrim Quality Solutions heritage; links CRO clinical data, pharmacovigilance, and post-marketing surveillance.
+- **Kivo**: Unified RIM, eTMF, and QMS eliminating cross-module synchronization drag for emerging biotechs.
+- **SafetyChain**: Plant-floor food safety, supplier compliance, and FSMA/GFSI management for dietary supplements and food producers.
+- **SafetyCulture**: Mobile-first frontline inspections, plant audits, and operational checklist automation.
 
 ### Tier 3 — Vertical & Adjacent Specialists
 *Sub-process owners managing mission-critical regulated micro-workflows.*
@@ -51,6 +55,7 @@ Based on empirical data from the mid-2026 durable knowledge bank, systems are cl
 
 ### Tier 4 — New Entrants & Disruptors
 *AI-native architectures, foundation model pioneers, and discrete copilots.*
+- **Ketryx**: AI-native connected lifecycle management and QMS/ALM for MedTech and SaMD; orchestrates Jira/Git with automated DHF and IEC 62304 / ISO 13485 compliance.
 - **Seal (seal.run)**: YC and SNR-backed AI-native QMS built around a 17-capability blueprint for biologics, medical devices, and CDMOs.
 - **Complere (complere.tech)**: Marketing-heavy, early-stage AI compliance assistant.
 - **AI Copilot Cluster**: AkelaHub, Extractable, Shoreline AI, OnRamp QA.
@@ -62,12 +67,12 @@ Based on empirical data from the mid-2026 durable knowledge bank, systems are cl
 
 | Buyer Segment | Primary Recommended Shortlist | Core Drivers |
 | :--- | :--- | :--- |
-| **Big-Pharma** | Veeva Systems, Honeywell/ETQ, SAP QM, Oracle, Siemens | Multi-site governance, unified clinical-to-commercial platform, global health authority audit defense. |
+| **Big-Pharma** | Veeva Systems, Honeywell (Sparta TrackWise), Hexagon (ETQ), SAP QM, Oracle, Siemens | Multi-site governance, unified clinical-to-commercial platform, global health authority audit defense. |
 | **Mid-Pharma** | MasterControl, Qualio, Veeva Systems, Dot Compliance | Rapid time-to-value, pre-validated GxP workflows, integrated MES, agentic compliance. |
-| **Med Device / MedTech** | Greenlight Guru, PTC (Arena), Veeva + Product Surveillance | FDA QMSR (ISO 13485 + 21 CFR Part 820), Design History File (DHF) CAD trace, ISO 14971 risk. |
+| **Med Device / MedTech** | Greenlight Guru, Ketryx, PTC (Arena), Veeva + Product Surveillance | FDA QMSR (ISO 13485 + 21 CFR Part 820), Design History File (DHF) CAD trace, ISO 14971 risk. |
 | **CDMOs & CMOs** | Veeva Systems, MasterControl, Seal (seal.run) | Multi-sponsor client partitioning, electronic batch records (eBR), release-by-exception velocity. |
-| **Biotech / Emerging** | Qualio, Veeva Quality Basics, Dot Compliance | Turnkey validation, minimal administrative drag, seamless scaling through IND to Phase II. |
-| **Supplements & Food** | Honeywell (ETQ Reliance), SafetyChain, SafetyCulture | FDA FSMA & GFSI standards, mobile frontline plant floor audit checklists, ingredient qualification. |
+| **Biotech / Emerging** | Qualio, Kivo, Veeva Quality Basics, Dot Compliance | Turnkey validation, minimal administrative drag, seamless scaling through IND to Phase II. |
+| **Supplements & Food** | Hexagon (ETQ Reliance), SafetyChain, SafetyCulture | FDA FSMA & GFSI standards, mobile frontline plant floor audit checklists, ingredient qualification. |
 
 ---
 

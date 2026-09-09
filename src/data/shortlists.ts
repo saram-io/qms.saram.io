@@ -18,7 +18,8 @@ export const BUYER_SHORTLISTS: BuyerSegment[] = [
     subtitle: 'Global commercial footprint, multi-site validation, deep IT estates',
     recommendedVendors: [
       { name: 'Veeva Systems', note: 'De facto strategic platform across Vault Quality, LIMS, and Regulatory.' },
-      { name: 'Honeywell (ETQ)', note: 'Dominates large-scale high-throughput manufacturing with Forge IIoT.' },
+      { name: 'Honeywell (Sparta TrackWise)', note: 'Decades of validation pedigree with TrackWise and TrackWise Digital.' },
+      { name: 'Hexagon (ETQ)', note: 'Dominates large-scale high-throughput manufacturing with 40+ modular applications.' },
       { name: 'SAP (S/4HANA QM)', note: 'Plays when enterprise IT consolidation supersedes standalone best-of-breed.' },
       { name: 'Oracle', note: 'Standard where Argus Safety and Oracle clinical estates dominate.' },
       { name: 'Siemens (Opcenter)', note: 'Preferred for mega-scale discrete & process manufacturing automation.' }
@@ -63,6 +64,7 @@ export const BUYER_SHORTLISTS: BuyerSegment[] = [
     subtitle: 'Hardware, SaMD, IVD, and combination products facing FDA QMSR & MDR',
     recommendedVendors: [
       { name: 'Greenlight Guru', note: 'Purpose-built for 1,100+ MedTech firms with QMSR hub & ISO 42001 certification.' },
+      { name: 'Ketryx', note: 'AI-native connected lifecycle & ALM directly orchestrating Jira/Git for SaMD and FDA QMSR.' },
       { name: 'PTC (Arena Solutions)', note: 'Dominates CAD/BOM engineering alignment with Design History Files (DHF).' },
       { name: 'Veeva Systems', note: 'Enterprise combination products with dedicated Product Surveillance module.' }
     ],
@@ -105,6 +107,7 @@ export const BUYER_SHORTLISTS: BuyerSegment[] = [
     subtitle: 'Pre-clinical to Phase II startups with lean quality personnel',
     recommendedVendors: [
       { name: 'Qualio', note: 'Agentic compliance, fast onboarding, intuitive interface for scientists.' },
+      { name: 'Kivo', note: 'Unified RIM, eTMF, and QMS eliminating cross-system sync friction for clinical startups.' },
       { name: 'Veeva Quality Basics', note: 'Turnkey pre-configured package allowing future growth into full Vault.' },
       { name: 'Dot Compliance', note: 'Salesforce cloud foundation with pre-trained Dottie AI personas.' }
     ],
@@ -125,7 +128,7 @@ export const BUYER_SHORTLISTS: BuyerSegment[] = [
     name: 'Supplements & Food Manufacturing',
     subtitle: 'High-volume production, FSMA compliance, supplier transparency',
     recommendedVendors: [
-      { name: 'Honeywell (ETQ)', note: 'ETQ Reliance is an established leader in high-volume food & beverage.' },
+      { name: 'Hexagon (ETQ)', note: 'ETQ Reliance is an established enterprise leader in high-volume food & beverage.' },
       { name: 'SafetyChain', note: 'Dedicated plant-floor food safety and supplier compliance platform.' },
       { name: 'SafetyCulture', note: 'Mobile-first frontline quality inspections and checklist auditing.' }
     ],
