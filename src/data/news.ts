@@ -13,6 +13,54 @@ export interface NewsItem {
 
 export const LATEST_NEWS: NewsItem[] = [
   {
+    id: 'fda-cp-7382-850-qmsr',
+    title: 'FDA Operationalizes CP 7382.850 for QMSR Inspections, Formally Retiring QSIT',
+    date: 'September 2026',
+    category: 'Regulatory & QMSR',
+    source: 'FDA CDRH Compliance Program Notice',
+    badge: 'Regulatory Watch',
+    featured: true,
+    summary: 'The FDA has formally operationalized Compliance Program CP 7382.850 ("Inspection of Medical Device Manufacturers"), fully retiring the legacy Quality System Inspection Technique (QSIT). Field investigators are now conducting inspections under the harmonized QMSR framework with heightened scrutiny into Total Product Life Cycle (TPLC) risk management, supplier audit records, and automated design control trace matrices.',
+    linkText: 'Explore MedTech Shortlist',
+    url: '/shortlist'
+  },
+  {
+    id: 'veeva-vault-release-26r2-2',
+    title: 'Veeva Deploys Vault Release 26R2.2 to Production Across Quality and Regulatory Clouds',
+    date: 'September 17, 2026',
+    category: 'Platform & M&A',
+    source: 'Veeva Systems Maintenance Notice',
+    badge: 'Production Upgrade',
+    featured: false,
+    summary: 'Veeva Systems deployed Vault Release 26R2.2 into global production environments, delivering targeted stability updates and document governance hardening following the 26R2 major cycle. The release reinforces the foundation for Vault Quality AI agent swarms and mandates platform-wide multi-factor authentication for enterprise tenants.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
+    id: 'dot-compliance-iso-42001',
+    title: 'Dot Compliance Achieves Accredited ISO/IEC 42001 Certification for AI Governance',
+    date: 'September 2026',
+    category: 'Certification',
+    source: 'Dot Compliance Corporate Announcement',
+    badge: 'ISO 42001',
+    featured: false,
+    summary: 'Dot Compliance achieved formal ISO/IEC 42001 certification for Artificial Intelligence Management Systems (AIMS), validating risk controls and explainability for its Salesforce-native Dottie AI Personas. The certification positions Dot Compliance alongside MasterControl and Greenlight Guru in auditable AI quality management.',
+    linkText: 'Open Live Benchmark',
+    url: '/ai-readiness-tracker'
+  },
+  {
+    id: 'hexagon-etq-reliance-ai',
+    title: 'Hexagon Launches ETQ Reliance AI Ecosystem with Automated Form and Complaint Advisors',
+    date: 'September 2026',
+    category: 'AI & Protocols',
+    source: 'Hexagon ETQ Press Release',
+    badge: 'Product Launch',
+    featured: false,
+    summary: 'Hexagon launched Reliance AI™ for ETQ Reliance, introducing native Form Field and Complaint & Feedback Advisors to automate intake and contextual investigation routing. The release advances Hexagon’s digital thread strategy, directly linking metrology anomaly detection with automated QMS non-conformance records.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
     id: 'veeva-vault-mcp-ga',
     title: 'Veeva Systems Ships Vault Model Context Protocol (MCP) Server in GA (Release 26R2)',
     date: 'August 2026',
@@ -31,7 +79,7 @@ export const LATEST_NEWS: NewsItem[] = [
     category: 'Regulatory & QMSR',
     source: 'FDA CDRH Notice',
     badge: 'Regulatory Watch',
-    featured: true,
+    featured: false,
     summary: 'The FDA’s landmark QMSR rule harmonizing 21 CFR Part 820 with ISO 13485:2016 has entered full enforcement. Medical device manufacturers and SaMD developers face revised inspection models focusing on risk management files and automated design control trace matrices.',
     linkText: 'Explore MedTech Shortlist',
     url: '/shortlist'
