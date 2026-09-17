@@ -12,6 +12,10 @@ const tier1Count = VENDORS.filter(v => v.tier === 1).length;
 const tier2Count = VENDORS.filter(v => v.tier === 2).length;
 const tier3Count = VENDORS.filter(v => v.tier === 3).length;
 const tier4Count = VENDORS.filter(v => v.tier === 4).length;
+
+const priceHighCount = VENDORS.filter(v => v.priceTransparency.startsWith('High')).length;
+const priceModCount = VENDORS.filter(v => v.priceTransparency.startsWith('Moderate')).length;
+const priceLowCount = VENDORS.filter(v => v.priceTransparency.startsWith('Low')).length;
 ---
 
 <div class="vendor-directory-container">
@@ -20,8 +24,8 @@ const tier4Count = VENDORS.filter(v => v.tier === 4).length;
       type="text" 
       id="vendorSearchInput" 
       class="search-input" 
-      aria-label="Search QMS vendors by name, category, or target buyer"
-      placeholder="Search by vendor name, category, buyer (e.g. Med device, Big-pharma), or AI milestone..." 
+      aria-label="Search QMS vendors by name, category, buyer, or price transparency"
+      placeholder="Search by vendor name, category, buyer (e.g. Med device, Big-pharma), price model, or AI milestone..." 
     />
     
     <div class="filter-pills">
@@ -33,9 +37,17 @@ const tier4Count = VENDORS.filter(v => v.tier === 4).length;
       <button class={`filter-btn ${initialTier === 4 ? 'active' : ''}`} data-filter-tier="4">Tier 4: Disruptors ({tier4Count})</button>
     </div>
 
-    <div style="font-size: 11.5px; color: var(--muted-text); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+    <div class="filter-pills" style="margin-top: 8px;">
+      <span class="filter-pill-label">Price Transparency:</span>
+      <button class="filter-btn active" data-filter-price="all">All ({VENDORS.length})</button>
+      <button class="filter-btn" data-filter-price="high">High / Transparent ({priceHighCount})</button>
+      <button class="filter-btn" data-filter-price="moderate">Moderate ({priceModCount})</button>
+      <button class="filter-btn" data-filter-price="low">Low / Opaque ({priceLowCount})</button>
+    </div>
+
+    <div style="font-size: 11.5px; color: var(--muted-text); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
       <span id="resultsCount">Showing {VENDORS.length} of {VENDORS.length} vendors</span>
-      <span id="activeFiltersDisplay">Active: All Tiers</span>
+      <span id="activeFiltersDisplay">Active: All Tiers | All Price Ratings</span>
     </div>
   </div>
 
@@ -47,7 +59,7 @@ const tier4Count = VENDORS.filter(v => v.tier === 4).length;
 
   <div id="noResultsMessage" style="display: none; padding: 40px; text-align: center; background: var(--card-bg); border-radius: 6px; border: 1px dashed #999;">
     <h3 style="font-family: var(--font-serif); margin-bottom: 8px;">No matching vendors found</h3>
-    <p style="font-size: 13px; color: var(--muted-text);">Try clearing your search query or selecting a different tier.</p>
+    <p style="font-size: 13px; color: var(--muted-text);">Try clearing your search query or selecting a different tier or price filter.</p>
     <button class="filter-btn" id="resetFiltersBtn" style="margin-top: 12px; background: #000; color: #fff;">Reset Filters</button>
   </div>
 </div>
@@ -56,7 +68,8 @@ const tier4Count = VENDORS.filter(v => v.tier === 4).length;
   (function() {
     function initVendorDirectory() {
       const searchInput = document.getElementById('vendorSearchInput');
-      const filterBtns = document.querySelectorAll('[data-filter-tier]');
+      const tierBtns = document.querySelectorAll('[data-filter-tier]');
+      const priceBtns = document.querySelectorAll('[data-filter-price]');
       const cards = document.querySelectorAll('#vendorCardsGrid .card');
       const resultsCount = document.getElementById('resultsCount');
       const activeFiltersDisplay = document.getElementById('activeFiltersDisplay');
@@ -65,8 +78,9 @@ const tier4Count = VENDORS.filter(v => v.tier === 4).length;
 
       if (!searchInput || !cards.length) return;
 
-      const activeBtn = document.querySelector('[data-filter-tier].active');
-      let currentTier = activeBtn ? (activeBtn.getAttribute('data-filter-tier') || 'all') : 'all';
+      const activeTierBtn = document.querySelector('[data-filter-tier].active');
+      let currentTier = activeTierBtn ? (activeTierBtn.getAttribute('data-filter-tier') || 'all') : 'all';
+      let currentPrice = 'all';
       let currentQuery = '';
 
       function filterCards() {
@@ -75,12 +89,14 @@ const tier4Count = VENDORS.filter(v => v.tier === 4).length;
 
         cards.forEach(card => {
           const tier = card.getAttribute('data-tier');
+          const price = card.getAttribute('data-price');
           const searchContent = card.getAttribute('data-search') || '';
 
           const matchesTier = (currentTier === 'all' || tier === currentTier);
+          const matchesPrice = (currentPrice === 'all' || price === currentPrice);
           const matchesQuery = !currentQuery || searchContent.includes(currentQuery.toLowerCase());
 
-          if (matchesTier && matchesQuery) {
+          if (matchesTier && matchesPrice && matchesQuery) {
             card.style.display = 'flex';
             visibleCount++;
           } else {
@@ -100,9 +116,16 @@ const tier4Count = VENDORS.filter(v => v.tier === 4).length;
             '3': 'Tier 3: Specialists',
             '4': 'Tier 4: Disruptors'
           };
+          const priceNames = {
+            all: 'All Price Ratings',
+            high: 'High (Transparent)',
+            moderate: 'Moderate (Directional)',
+            low: 'Low (Opaque)'
+          };
           const tierText = tierNames[currentTier] || `Tier ${currentTier}`;
+          const priceText = priceNames[currentPrice] || currentPrice;
           const queryText = currentQuery ? ` "${currentQuery}"` : '';
-          activeFiltersDisplay.textContent = `Active: ${tierText}${queryText}`;
+          activeFiltersDisplay.textContent = `Active: ${tierText} | ${priceText}${queryText}`;
         }
 
         if (noResultsMsg) {
@@ -110,11 +133,20 @@ const tier4Count = VENDORS.filter(v => v.tier === 4).length;
         }
       }
 
-      filterBtns.forEach(btn => {
+      tierBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-          filterBtns.forEach(b => b.classList.remove('active'));
+          tierBtns.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
           currentTier = btn.getAttribute('data-filter-tier') || 'all';
+          filterCards();
+        });
+      });
+
+      priceBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          priceBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentPrice = btn.getAttribute('data-filter-price') || 'all';
           filterCards();
         });
       });
@@ -129,8 +161,12 @@ const tier4Count = VENDORS.filter(v => v.tier === 4).length;
           searchInput.value = '';
           currentQuery = '';
           currentTier = 'all';
-          filterBtns.forEach(b => {
+          currentPrice = 'all';
+          tierBtns.forEach(b => {
             b.classList.toggle('active', b.getAttribute('data-filter-tier') === 'all');
+          });
+          priceBtns.forEach(b => {
+            b.classList.toggle('active', b.getAttribute('data-filter-price') === 'all');
           });
           filterCards();
         });

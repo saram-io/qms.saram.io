@@ -12,12 +12,20 @@ const tierBadgeClass =
   vendor.tier === 2 ? 'badge-tier2' :
   vendor.tier === 3 ? 'badge-tier3' : 'badge-tier4';
 
+const priceKey = 
+  vendor.priceTransparency.startsWith('High') ? 'high' :
+  vendor.priceTransparency.startsWith('Moderate') ? 'moderate' : 'low';
+
+const priceBadgeClass = `badge-price-${priceKey}`;
+
 const searchTokens = [
   vendor.name,
   vendor.product,
   vendor.category,
   vendor.summary,
   vendor.aiMilestones || '',
+  vendor.priceTransparency || '',
+  vendor.pricingModel || '',
   vendor.keyDifferentiator,
   vendor.targetBuyers.join(' '),
   vendor.scope?.join(' ') || ''
@@ -29,6 +37,7 @@ const searchTokens = [
   data-tier={vendor.tier} 
   data-category={vendor.category} 
   data-name={vendor.name.toLowerCase()} 
+  data-price={priceKey}
   data-search={searchTokens}
 >
   <div class="card-header">
@@ -47,7 +56,16 @@ const searchTokens = [
       {vendor.aiReadiness && (
         <span class="badge badge-ai">AI: {vendor.aiReadiness}</span>
       )}
+      {vendor.priceTransparency && (
+        <span class={`badge ${priceBadgeClass}`}>Price: {vendor.priceTransparency}</span>
+      )}
     </div>
+
+    {vendor.pricingModel && (
+      <div class="card-pricing-note">
+        <strong>Pricing Model:</strong> {vendor.pricingModel}
+      </div>
+    )}
 
     {vendor.aiMilestones && (
       <div style="font-size: 11.5px; background: rgba(0,0,0,0.03); padding: 8px 10px; border-radius: 4px; margin: 8px 0; border-left: 2px solid #333; line-height: 1.45;">

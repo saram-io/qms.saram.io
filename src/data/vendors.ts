@@ -1,3 +1,8 @@
+export type PriceTransparencyRating = 
+  | 'High (Transparent)' 
+  | 'Moderate (Directional)' 
+  | 'Low (Opaque)';
+
 export interface Vendor {
   id: string;
   name: string;
@@ -30,6 +35,8 @@ export interface Vendor {
     | 'Emerging (AI-Native)' 
     | 'Sub-process Specialist' 
     | 'Conventional / Legacy';
+  priceTransparency: PriceTransparencyRating;
+  pricingModel: string;
   keyDifferentiator: string;
   website?: string;
 }
@@ -52,6 +59,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Enterprise QMS', 'LIMS', 'Batch Release', 'Validation Management', 'Training Management', 'Document Control'],
     aiMilestones: 'AI Agents achieved General Availability in Dec 2025. Vault MCP (Model Context Protocol) Server shipped in Aug 2026, opening Vault quality data to agentic orchestration.',
     aiReadiness: 'High (Agentic & MCP)',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Enterprise multi-module annual contract; custom pricing based on organization size and modules with separate validation and implementation services.',
     keyDifferentiator: 'Strategic multi-application footprint and industry standard data layer across top-tier biopharma enterprises.',
     website: 'https://veeva.com/products/vault-quality'
   },
@@ -67,6 +76,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Cloud QMS', 'MES / Electronic Batch Records', 'CMMS / Calibration (Qualer)', 'Supplier Quality', 'Training'],
     aiMilestones: 'ISO/IEC 42001 (AI Management System) certified in July 2025. Shipped 6 production AI features in 14 months across document summary, CAPA routing, and audit review.',
     aiReadiness: 'High (ISO 42001 Certified)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Modular annual subscription (Qx, MES, Qualer) with tiered seat packaging; custom enterprise quote required.',
     keyDifferentiator: 'Seamless bridge from QMS directly into shop-floor MES and asset calibration, backed by ISO 42001 AI certification.',
     website: 'https://mastercontrol.com'
   },
@@ -84,6 +95,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Enterprise QMS', 'CAPA & Deviation Management', 'Batch Disposition', 'Complaint Handling', 'Supplier Quality', 'Audit Management'],
     aiMilestones: 'Integration with Honeywell Forge Life Sciences for predictive batch deviation analysis and automated quality event classification.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Custom enterprise contracts; on-premise or cloud licensing with substantial implementation, validation, and maintenance overhead.',
     keyDifferentiator: 'Decades of deep validation defense and ubiquitous presence across global Top-50 pharmaceutical manufacturing sites.',
     website: 'https://spartasystems.com'
   },
@@ -101,6 +114,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Document Control', 'CAPA & Non-Conformance', 'Audits', 'Connected Plant Quality', 'EHS', 'Supplier Quality'],
     aiMilestones: 'ETQ Reliance AI-driven quality insights and Hexagon digital reality sensor integrations for autonomous shop-floor anomaly detection.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Multi-tiered enterprise licensing based on plant sites, concurrent/named users, and module bundles; custom quotation.',
     keyDifferentiator: 'Broadest pre-built application library (40+ modules) combined with Hexagon industrial metrology and sensor-to-quality connectivity.',
     website: 'https://etq.com'
   },
@@ -117,6 +132,8 @@ export const VENDORS: Vendor[] = [
     scope: ['PLM-Centric QMS', 'Design History File (DHF)', 'Device Master Record (DMR)', 'Engineering Change Orders (ECO)', 'CAPA'],
     aiMilestones: 'PTC generative design and automated BOM/change-impact analysis integrations.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Per-user tiered SaaS subscription based on user roles (full, review, read-only); directional quotes available.',
     keyDifferentiator: 'Zero-friction alignment between engineering CAD/BOMs, Design Controls, and FDA QSR/QMSR compliance.',
     website: 'https://arenasolutions.com'
   },
@@ -132,6 +149,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Closed-Loop Quality', 'Statistical Process Control (SPC)', 'FMEA', 'Incoming Inspection', 'Complaint Handling'],
     aiMilestones: 'Siemens Industrial Copilot integrations for engineering and manufacturing quality monitoring.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Enterprise manufacturing operations licensing; custom quoting based on plant sites, connected equipment, and user seats.',
     keyDifferentiator: 'Industrial scale and integration with Siemens Teamcenter PLM and Opcenter Execution MES.',
     website: 'https://siemens.com/opcenter'
   },
@@ -147,6 +166,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Quality Planning', 'Quality Inspection', 'Quality Certificates', 'Quality Notifications', 'Batch Release Integration'],
     aiMilestones: 'SAP Joule generative AI assistant rolled out across supply chain and quality inspection workflows.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Bundled within SAP S/4HANA enterprise ERP licensing (FUE / named users); high systems-integrator consulting fees.',
     keyDifferentiator: 'Zero data transfer latency between procurement, inventory, batch records, finance, and quality holds.',
     website: 'https://sap.com/products/scm/quality-management.html'
   },
@@ -162,6 +183,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Pharmacovigilance & Safety', 'Clinical Trial Quality', 'Supply Chain QM', 'Batch Release'],
     aiMilestones: 'Oracle Cloud Infrastructure (OCI) GenAI agents applied to clinical documentation and adverse event narratives.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Enterprise cloud agreement; complex modular licensing for Argus Safety/Fusion with separate enterprise service contracts.',
     keyDifferentiator: 'Unmatched dominance in global pharmacovigilance (Argus) and database infrastructure in legacy big-pharma.',
     website: 'https://oracle.com/life-sciences'
   },
@@ -182,6 +205,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Design Controls', 'Risk Management (ISO 14971)', 'Document Management', 'CAPA', 'FDA QMSR Alignment'],
     aiMilestones: 'Shipped AI Connector in Q2 2026 supporting ChatGPT, Claude, Copilot, and Gemini. Achieved ISO/IEC 42001 certification in June 2026.',
     aiReadiness: 'High (ISO 42001 Certified)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Tiered annual SaaS packages (Grow, Scale, Expand) scaled to MedTech headcount and required regulatory modules.',
     keyDifferentiator: 'MedTech-native workflows pre-aligned with FDA QMSR, ISO 13485, and ISO 14971 out-of-the-box.',
     website: 'https://greenlight.guru'
   },
@@ -197,6 +222,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Cloud QMS', 'Automated Gap Analysis', 'Document Controls', 'Training', 'Supplier Management', 'CAPA'],
     aiMilestones: 'Native autonomous AI agents for automated regulatory gap analysis, audit readiness scoring, and regulatory watch.',
     aiReadiness: 'High (Agentic & MCP)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Tiered annual subscription based on company stage and user bands; directional starting tiers available on request.',
     keyDifferentiator: 'High velocity of onboarding (weeks, not months) paired with native agentic regulatory compliance intelligence.',
     website: 'https://qualio.com'
   },
@@ -212,6 +239,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Document Management', 'Change Control', 'CAPA', 'Complaints', 'Supplier Management', 'Training'],
     aiMilestones: 'Dottie AI Gen 5.0 launched April 2026 with autonomous agentic Personas for automated investigation, review, and authoring.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Annual subscription per seat built on Salesforce OEM infrastructure; modular add-ons for AI Personas.',
     keyDifferentiator: 'Pioneering AI-first architecture leveraging Salesforce FedRAMP-grade infrastructure and CRM data.',
     website: 'https://dotcompliance.com'
   },
@@ -227,6 +256,8 @@ export const VENDORS: Vendor[] = [
     scope: ['QMS', 'EHS (Environmental Health & Safety)', 'Supplier Quality', 'Risk Management', 'Clinical / Complaints'],
     aiMilestones: 'Salesforce Einstein AI integrations for predictive supplier risk and automated incident categorization.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Per-user, per-module annual subscription on Salesforce platform; custom quotes based on QMS/EHS module scope.',
     keyDifferentiator: 'Native blend of QMS and EHS on the Salesforce platform, simplifying vendor management and EH&S compliance.',
     website: 'https://compliancequest.com'
   },
@@ -242,6 +273,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Audit Management', 'Incident Reporting', 'Document Control', 'Asset Management', 'CAPA'],
     aiMilestones: 'CTO-led "AI-first" initiative declared February 2026, rolling out automated document review and audit checklist generation.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Annual modular subscription scaled to user count and compliance modules; directional quotes by industry.',
     keyDifferentiator: 'Vast customer scale (18,000+ organizations) and multi-industry regulatory accreditation expertise.',
     website: 'https://ideagen.com'
   },
@@ -257,6 +290,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Document Management', 'CAPA', 'Deviations', 'Change Controls', 'Audit & Inspection', 'Training'],
     aiMilestones: 'Smart analytics and workflow recommendations with automated document validation pipelines.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Tiered user subscription (Starter, Scale, Enterprise) based on active user count with transparent module upgrades.',
     keyDifferentiator: 'Strong European regulatory roots (EMA, Annex 11) with modern, user-friendly interface and rapid rollout.',
     website: 'https://scilife.net'
   },
@@ -272,6 +307,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Document Control', 'Change Control', 'CAPA', 'Training', 'Audits', 'Supplier Quality'],
     aiMilestones: 'Integration with Microsoft 365 Copilot for GxP document drafting and SOP search.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'High (Transparent)',
+    pricingModel: 'Standardized per-user annual subscription plans including validation packages, cloud hosting, and support.',
     keyDifferentiator: 'Deep native integration with Microsoft Word, Excel, and 365 environments while maintaining 21 CFR Part 11 validation.',
     website: 'https://simplerqms.com'
   },
@@ -287,6 +324,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Document Management', 'Training Management', 'Audits', 'CAPA & Issues', 'Vendor Qualification'],
     aiMilestones: 'Structured quality data APIs enabling LLM ingestion for audit preparation.',
     aiReadiness: 'Conventional / Legacy',
+    priceTransparency: 'High (Transparent)',
+    pricingModel: 'Predictable all-inclusive annual subscription with unlimited users and no unbundled validation pack fees.',
     keyDifferentiator: 'Predictable all-inclusive pricing without seat license gouging, making it favored by emerging biotechs.',
     website: 'https://zenqms.com'
   },
@@ -302,6 +341,8 @@ export const VENDORS: Vendor[] = [
     scope: ['CAPA', 'Document Management', 'Complaint Handling', 'Supplier Quality', 'Training', 'Audit Management'],
     aiMilestones: 'AssurX automated workflow rules and predictive risk matrix calculation.',
     aiReadiness: 'Conventional / Legacy',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Traditional enterprise licensing or cloud hosting; custom quote based on concurrent users and module configurations.',
     keyDifferentiator: 'Quarter-century mature configurable workflow engine capable of handling complex hybrid regulatory mandates.',
     website: 'https://assurx.com'
   },
@@ -317,6 +358,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Document Management', 'Non-Conformance', 'CAPA', 'Change Management', 'Training', 'Supplier Quality'],
     aiMilestones: 'Predictive compliance scoring using Salesforce Einstein analytics.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Modular per-user per-month licensing on Salesforce AppExchange with directional entry pricing.',
     keyDifferentiator: 'Enterprise Salesforce integration with flexible modular deployment for mid-market budgets.',
     website: 'https://qualityze.com'
   },
@@ -333,6 +376,8 @@ export const VENDORS: Vendor[] = [
     scope: ['SmartSolve eQMS', 'Clinical QMS', 'GCP / GLP Compliance', 'Post-Marketing Surveillance', 'Audit Trails', 'CAPA'],
     aiMilestones: 'IQVIA Connected Intelligence AI models applied to adverse events and clinical site risk scoring.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Enterprise life sciences contract; custom pricing tied to CRO clinical scale and multi-module GxP requirements.',
     keyDifferentiator: 'Proven SmartSolve heritage paired with incomparable clinical trial dataset and global CRO domain expertise.',
     website: 'https://iqvia.com'
   },
@@ -348,6 +393,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Unified QMS', 'Document Control', 'Training Management', 'CAPA & Deviations', 'eTMF', 'RIM'],
     aiMilestones: 'Intelligent document classification, automated cross-referencing between regulatory dossiers and quality SOPs.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'High (Transparent)',
+    pricingModel: 'Transparent unified GxP platform pricing; flat packaging covering Quality, Regulatory, and Clinical without cross-module fees.',
     keyDifferentiator: 'Single cohesive data substrate uniting Quality, Regulatory, and Clinical for biotech teams with lean administrative resources.',
     website: 'https://kivo.io'
   },
@@ -363,6 +410,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Food Safety (FSMA/GFSI)', 'Frontline Plant Quality', 'Supplier Compliance', 'HACCP Automation', 'SPC & Process Monitoring'],
     aiMilestones: 'Real-time statistical process control (SPC) anomaly alerts and automated certificate of analysis (CoA) ingestion.',
     aiReadiness: 'Conventional / Legacy',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Annual subscription priced by manufacturing facility count and active production lines; directional quotes on request.',
     keyDifferentiator: 'Direct plant-floor focus tailored for food and supplement standards without unnecessary pharma 21 CFR Part 11 software bloat.',
     website: 'https://safetychain.com'
   },
@@ -378,6 +427,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Mobile Inspections & Checklists', 'Issue Reporting', 'Corrective Actions', 'Asset Auditing', 'Frontline Training'],
     aiMilestones: 'SafetyCulture AI template generator and automated photo-to-defect analysis.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'High (Transparent)',
+    pricingModel: 'Public self-serve pricing tiers (Free tier, Premium at ~$24/user/mo, Enterprise custom).',
     keyDifferentiator: 'Frictionless mobile-first experience for frontline factory and field workers with instant checklist conversion.',
     website: 'https://safetyculture.com'
   },
@@ -398,6 +449,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Sample Management', 'QC Testing', 'Instrument Data Capture', 'CoA Release'],
     aiMilestones: 'Automated peak integration and spectroscopic anomaly detection via proprietary algorithms.',
     aiReadiness: 'Sub-process Specialist',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Strict enterprise quote-only; heavy upfront licensing, laboratory instrument integration fees, and annual maintenance.',
     keyDifferentiator: 'Direct instrument bus integration and sub-process data integrity at the laboratory bench.',
     website: 'https://labware.com'
   },
@@ -413,6 +466,8 @@ export const VENDORS: Vendor[] = [
     scope: ['eCTD Submissions', 'Regulatory Dossiers', 'Labeling Governance', 'Health Authority Inquiries'],
     aiMilestones: 'AI-assisted dossier translation and submission document health-check validators.',
     aiReadiness: 'Sub-process Specialist',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Enterprise custom contract; priced by active dossier count, global target markets, and regulatory user seats.',
     keyDifferentiator: 'Standardized global regulatory submission gateways for FDA, EMA, PMDA, and NMPA.',
     website: 'https://veeva.com/products/vault-rim'
   },
@@ -428,6 +483,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Paperless Validation', 'GAMP 5 Lifecycle', 'CSA Testing', 'Electronic Protocol Execution'],
     aiMilestones: 'ValGenesis VAL™ Agentic AI launched Apr 2026; Veeva MCP Server GA Aug 2026; Kneat AI governance.',
     aiReadiness: 'High (Agentic & MCP)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Subscription per validated site or system; directional pricing available with validation test-pack bundles.',
     keyDifferentiator: '100% digital protocol generation and dynamic requirement-to-test traceability.',
     website: 'https://kneat.com'
   },
@@ -443,6 +500,8 @@ export const VENDORS: Vendor[] = [
     scope: ['CAD/BOM Management', 'Design History Files (DHF)', 'Device Master Records (DMR)', 'Engineering Change Management'],
     aiMilestones: 'Generative CAD design and predictive component obsolescence alerting.',
     aiReadiness: 'Sub-process Specialist',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Tiered engineering user seats plus CAD connector licensing; custom enterprise quotation.',
     keyDifferentiator: 'Engineering design source of truth directly feeding QMS change and risk matrices.',
     website: 'https://ptc.com'
   },
@@ -458,6 +517,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Electronic Batch Records (eBR)', 'Recipe Execution', 'Review-by-Exception (RBE)', 'Line Clearance'],
     aiMilestones: 'AI review-by-exception analyzing thousands of continuous parameters for automated batch release.',
     aiReadiness: 'Sub-process Specialist',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Plant-wide enterprise capital expenditure or SaaS license; millions in custom plant integration and validation services.',
     keyDifferentiator: 'Hard real-time integration with plant-floor PLCs, SCADA, and DCS systems.',
     website: 'https://werum.com'
   },
@@ -473,6 +534,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Adverse Event Intake', 'Medical Review', 'Signal Detection', 'E2B(R3) Regulatory Transmissions'],
     aiMilestones: 'LLMs for automated case narrative extraction from medical literature and spontaneous call logs.',
     aiReadiness: 'Moderate (AI Agents/Personas)',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Volume-based pricing on annual adverse event cases and regulatory gateway transmission fees.',
     keyDifferentiator: 'Mission-critical compliance with strict 7-day and 15-day fatal/life-threatening safety reporting clocks.',
     website: 'https://veeva.com/products/vault-safety'
   },
@@ -488,6 +551,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Incident Management', 'OSHA Reporting', 'ESG / Carbon Accounting', 'Chemical Safety'],
     aiMilestones: 'Computer vision analysis of workplace video feeds for PPE compliance and slip/trip hazard detection.',
     aiReadiness: 'Sub-process Specialist',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Facility-based or employee-headcount subscription; modular packaging for ESG, OSHA, and chemical safety.',
     keyDifferentiator: 'Environmental sustainability and occupational worker safety specialized regulatory compliance.',
     website: 'https://intelex.com'
   },
@@ -503,6 +568,8 @@ export const VENDORS: Vendor[] = [
     scope: ['21 CFR Part 11 LMS', 'Curriculum Pathways', 'Read-and-Understood SOP Tracking', 'Inspection Defense'],
     aiMilestones: 'AI-generated interactive comprehension quizzes based on updated SOP text.',
     aiReadiness: 'Sub-process Specialist',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Annual subscription scaled to active learner count and regulated content library access.',
     keyDifferentiator: 'Audit-bulletproof training records defending against FDA 483 observations on operator qualification.',
     website: 'https://compliancewire.com'
   },
@@ -523,6 +590,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Connected QMS / ALM', 'Automated DHF & Trace Matrix', 'IEC 62304 & ISO 14971', 'SaMD Cyber Compliance', 'Jira/Git Orchestration'],
     aiMilestones: 'AI-native compliance guardrails analyzing commits, issues, and pull requests for automatic test generation, risk impact scoring, and DHF synchronization.',
     aiReadiness: 'High (Agentic & MCP)',
+    priceTransparency: 'High (Transparent)',
+    pricingModel: 'Predictable developer-seat and repository-based SaaS subscription; transparent tier structure for medical software teams.',
     keyDifferentiator: 'Native developer-tool orchestration that embeds medical device compliance into Git/Jira without forcing engineers into slow legacy desktop forms.',
     website: 'https://ketryx.com'
   },
@@ -538,6 +607,8 @@ export const VENDORS: Vendor[] = [
     scope: ['AI-Native QMS', '17-Capability Blueprint', 'Automated Deviation Drafting', 'Dynamic Traceability'],
     aiMilestones: 'Built natively with LLM foundation models as first-class architectural entities rather than bolt-on copilot interfaces.',
     aiReadiness: 'Emerging (AI-Native)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Venture-backed modern SaaS subscription; pilot deployments and founder-led custom onboarding tiers.',
     keyDifferentiator: 'Zero legacy technical debt; engineered natively for autonomous agentic life sciences compliance.',
     website: 'https://seal.run'
   },
@@ -553,6 +624,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Compliance Copilot', 'Automated Document Drafting'],
     aiMilestones: 'Generative AI compliance assistant.',
     aiReadiness: 'Emerging (AI-Native)',
+    priceTransparency: 'Moderate (Directional)',
+    pricingModel: 'Early-stage startup subscription pricing; directional pilot packages for pre-seed/seed biotechs.',
     keyDifferentiator: 'Aggressive marketing targeting seed-stage biotech founders.',
     website: 'https://complere.tech'
   },
@@ -568,6 +641,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Root Cause Synthesis', 'Audit Packet Assembly', 'Deviation Writing Copilots'],
     aiMilestones: 'Prompt engineering and RAG workflows atop commercial frontier models.',
     aiReadiness: 'Emerging (AI-Native)',
+    priceTransparency: 'High (Transparent)',
+    pricingModel: 'Usage-based SaaS or per-seat monthly/annual subscriptions; fast self-serve or directional trial onboarding.',
     keyDifferentiator: 'Fast deployment as external overlay tools on top of legacy documentation stores.',
     website: 'https://saram.io'
   },
@@ -584,6 +659,8 @@ export const VENDORS: Vendor[] = [
     scope: ['Enterprise GRC', 'IT Incident Management', 'Vendor Risk'],
     aiMilestones: 'ServiceNow Now Assist generative AI workflow automation.',
     aiReadiness: 'Conventional / Legacy',
+    priceTransparency: 'Low (Opaque)',
+    pricingModel: 'Enterprise custom contract; core enterprise IT platform license plus GRC module surcharges.',
     keyDifferentiator: 'Dominance in corporate enterprise IT service management (ITSM) and general workflow routing.',
     website: 'https://servicenow.com'
   }
