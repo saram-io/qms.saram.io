@@ -13,6 +13,42 @@ export interface NewsItem {
 
 export const LATEST_NEWS: NewsItem[] = [
   {
+    id: 'compliancequest-summer26-agentic-ai',
+    title: "ComplianceQuest Deploys Agentic AI in Summer '26 Release for Autonomous QMS and Safety Workflows",
+    date: 'September 2026',
+    category: 'Agentic Compliance',
+    source: 'ComplianceQuest Corporate Announcement',
+    badge: 'Agentic AI',
+    featured: false,
+    summary: 'ComplianceQuest rolled out native Agentic AI capabilities within its Summer \'26 release on the Salesforce AppExchange. The platform deploys autonomous agents designed to ingest nonconformances, perform root-cause investigations, and auto-draft CAPA action plans directly against 21 CFR Part 11 electronic audit trails.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
+    id: 'ketryx-series-b-validated-ai',
+    title: 'Ketryx Secures $39M Series B Led by Transformation Capital, Deploys Validated AI Agents',
+    date: 'September 2026',
+    category: 'AI Disruptors',
+    source: 'Ketryx Press Release',
+    badge: '$39M Series B',
+    featured: false,
+    summary: 'Medical software lifecycle platform Ketryx closed a $39M Series B funding round led by Transformation Capital, bringing total capital to $55M as former Medtronic CEO Bill Hawkins joined the board. The company also expanded deployment of its validated AI agents, automating DHF cross-traceability and IEC 62304/ISO 14971 compliance across top MedTech enterprises.',
+    linkText: 'View Disruptor Tier 4',
+    url: '/tiers'
+  },
+  {
+    id: 'qualio-iso-42001-certification',
+    title: 'Qualio Achieves Accredited ISO/IEC 42001 Certification for Compliance Intelligence Platform',
+    date: 'September 2026',
+    category: 'Certification',
+    source: 'Qualio Corporate Announcement',
+    badge: 'ISO 42001',
+    featured: false,
+    summary: 'Qualio secured formal ISO/IEC 42001 certification for Artificial Intelligence Management Systems (AIMS), validating risk governance and explainability for its Compliance Intelligence engine. The accreditation reinforces automated gap analysis across FDA QMSR and ISO 13485 for emerging biopharma and MedTech innovators.',
+    linkText: 'Open Live Benchmark',
+    url: '/ai-readiness-tracker'
+  },
+  {
     id: 'fda-cp-7382-850-qmsr',
     title: 'FDA Operationalizes CP 7382.850 for QMSR Inspections, Formally Retiring QSIT',
     date: 'September 2026',
