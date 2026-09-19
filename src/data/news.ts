@@ -13,6 +13,42 @@ export interface NewsItem {
 
 export const LATEST_NEWS: NewsItem[] = [
   {
+    id: 'greenlight-guru-mcp-server',
+    title: 'Greenlight Guru Ships Production Model Context Protocol (MCP) Server for GG Quality',
+    date: 'September 18, 2026',
+    category: 'AI & Protocols',
+    source: 'Greenlight Guru Engineering Announcement',
+    badge: 'MCP Server',
+    featured: true,
+    summary: 'Greenlight Guru released its production Model Context Protocol (MCP) Server for the GG Quality suite, enabling MedTech teams to query CAPAs, nonconformances, and design trace records directly via Claude, ChatGPT, and Copilot. The implementation establishes an open, standardized protocol interface that bypasses proprietary API lock-in while maintaining 21 CFR Part 11 audit trails.',
+    linkText: 'Open Live Benchmark',
+    url: '/ai-readiness-tracker'
+  },
+  {
+    id: 'ennov-ceo-oxana-pickeral',
+    title: 'Ennov Appoints Former Sparta Systems CEO Dr. Oxana Pickeral to Lead Global Agentic QMS Expansion',
+    date: 'September 2026',
+    category: 'Platform & M&A',
+    source: 'Ennov Corporate Announcement',
+    badge: 'Executive Move',
+    featured: false,
+    summary: 'European life sciences software platform Ennov named Dr. Oxana Pickeral, former President and CEO of Sparta Systems (Honeywell TrackWise), as Chief Executive Officer following strategic growth investments from Bregal Sagemount and Ardian Growth. Pickeral will lead Ennov\'s global scaling and accelerated rollout of agentic compliance across unified QMS, RIM, and clinical solutions.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
+    id: 'kivo-headless-gxp',
+    title: 'Kivo Unveils Headless GxP™ Agent-Native Architecture Across Unified Quality and Regulatory Suite',
+    date: 'September 2026',
+    category: 'Agentic Compliance',
+    source: 'Kivo Product Announcement',
+    badge: 'Headless GxP',
+    featured: false,
+    summary: 'Kivo launched Headless GxP™, an open agent-native architecture unifying Quality, Clinical eTMF, and Regulatory Information Management for emerging biopharma. The architecture establishes a permissioned data layer allowing autonomous AI agents to orchestrate SOP reviews, deviation investigations, and trial records without cross-system middleware.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
     id: 'compliancequest-summer26-agentic-ai',
     title: "ComplianceQuest Deploys Agentic AI in Summer '26 Release for Autonomous QMS and Safety Workflows",
     date: 'September 2026',
@@ -103,7 +139,7 @@ export const LATEST_NEWS: NewsItem[] = [
     category: 'AI & Protocols',
     source: 'Veeva Systems Press Release',
     badge: 'GA Release',
-    featured: true,
+    featured: false,
     summary: 'Veeva Systems officially shipped its Model Context Protocol (MCP) Server for the Vault Quality Cloud. Enterprise biopharma can now deploy standardized Anthropic-protocol AI agent swarms to query validated quality documents, deviations, and batch release records without proprietary vendor lock-in.',
     linkText: 'Read Architectural Analysis',
     url: '/ai-trends'
@@ -155,41 +191,5 @@ export const LATEST_NEWS: NewsItem[] = [
     summary: 'Our independent benchmark audits 16+ life sciences QMS suites across MCP support, modern REST API maturity, walled-garden lock-in policies, and 21 CFR Part 11 electronic audit trail defensibility for generative AI calls.',
     linkText: 'Open Live Benchmark',
     url: '/ai-readiness-tracker'
-  },
-  {
-    id: 'dot-compliance-dottie-gen5',
-    title: 'Dot Compliance Launches Dottie AI Gen 5.0 with Specialized Agentic Compliance Personas',
-    date: 'April 2026',
-    category: 'Agentic Compliance',
-    source: 'Dot Compliance Release Brief',
-    badge: 'Product Launch',
-    featured: false,
-    summary: 'Dot Compliance deployed Dottie AI Gen 5.0 on Salesforce, introducing autonomous agentic personas that trigger on shop-floor events to proactively investigate deviations, generate CAPA action plans, and predict inspection readiness.',
-    linkText: 'Check Vendor Score',
-    url: '/ai-readiness-tracker'
-  },
-  {
-    id: 'seal-ai-native-qms',
-    title: 'YC & SNR-Backed Seal Unveils 17-Capability AI-Native QMS Blueprint for CDMOs',
-    date: 'March 2026',
-    category: 'AI Disruptors',
-    source: 'Seal / Y Combinator Showcase',
-    badge: 'New Entrant',
-    featured: false,
-    summary: 'Challenger startup Seal (seal.run) launched its 17-capability autonomous quality operating system, engineered to replace manual document handling with real-time continuous data validation for high-velocity biologics manufacturers.',
-    linkText: 'View Disruptor Tier 4',
-    url: '/tiers'
-  },
-  {
-    id: 'ideagen-ai-overhaul',
-    title: 'Ideagen Accelerates AI Modernization Across 18,000+ Regulated Customer Sites',
-    date: 'February 2026',
-    category: 'Platform & M&A',
-    source: 'Ideagen Interim Report',
-    badge: 'Corporate Shift',
-    featured: false,
-    summary: 'Ideagen announced an architectural transformation of its Quality Management suite (fka Q-Pulse), deploying AI-driven regulatory compliance monitoring and modernized REST endpoints for aviation and healthcare clients.',
-    linkText: 'View Directory Details',
-    url: '/vendors'
   }
 ];
