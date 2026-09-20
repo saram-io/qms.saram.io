@@ -13,6 +13,30 @@ export interface NewsItem {
 
 export const LATEST_NEWS: NewsItem[] = [
   {
+    id: 'qualio-pydantic-ai-evals',
+    title: 'Qualio Deploys Pydantic AI Architecture with 300+ Automated Evals for Defensible Agentic Compliance',
+    date: 'September 19, 2026',
+    category: 'Agentic Compliance',
+    source: 'Qualio Engineering Architecture Brief',
+    badge: 'Agentic Evals',
+    featured: false,
+    summary: 'Qualio detailed its production agentic compliance architecture built on Pydantic AI and Pydantic Evals, enforcing over 300 automated regression evaluation gates per deployment. The type-safe orchestration layer translates natural-language quality criteria into structured, auditable validation checkpoints, ensuring that autonomous SOP generation and FDA QMSR gap analyses remain verifiable under 21 CFR Part 11.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
+    id: 'ptc-arena-2026-2-ai-engine',
+    title: 'PTC Deploys Arena 2026.2 Introducing Arena Connect and Bedrock-Powered AI Engine',
+    date: 'September 19, 2026',
+    category: 'AI & Protocols',
+    source: 'PTC Arena Release Notes',
+    badge: 'Release 2026.2',
+    featured: false,
+    summary: 'PTC deployed Arena release 2026.2, introducing Arena Connect to provide visual, low-code integration pipelines between enterprise MES, ERP, and quality records. The update embeds the Amazon Bedrock-powered Arena AI Engine, automating BOM compliance verifications, engineering change summaries, and conversational guidance for Engineering Change Orders (ECOs) and CAPAs.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
     id: 'greenlight-guru-mcp-server',
     title: 'Greenlight Guru Ships Production Model Context Protocol (MCP) Server for GG Quality',
     date: 'September 18, 2026',
@@ -155,30 +179,6 @@ export const LATEST_NEWS: NewsItem[] = [
     summary: 'The FDA’s landmark QMSR rule harmonizing 21 CFR Part 820 with ISO 13485:2016 has entered full enforcement. Medical device manufacturers and SaMD developers face revised inspection models focusing on risk management files and automated design control trace matrices.',
     linkText: 'Explore MedTech Shortlist',
     url: '/shortlist'
-  },
-  {
-    id: 'mastercontrol-200m-arr',
-    title: 'MasterControl Surpasses $200M ARR Following Qualer Asset Calibration Integration',
-    date: 'July 2026',
-    category: 'Platform & M&A',
-    source: 'MasterControl Financial Disclosures',
-    badge: '$200M ARR',
-    featured: false,
-    summary: 'MasterControl crossed $200M in annual recurring revenue, accelerating cloud consolidation across 1,100+ customers by uniting core QMS with electronic batch records (MES) and calibrated equipment maintenance via its Qualer acquisition.',
-    linkText: 'View MasterControl Profile',
-    url: '/vendors'
-  },
-  {
-    id: 'greenlight-guru-iso42001',
-    title: 'Greenlight Guru Achieves ISO/IEC 42001 AI Certification, Launches Open AI Connector',
-    date: 'June 2026',
-    category: 'Certification',
-    source: 'Greenlight Guru Corporate Announcement',
-    badge: 'ISO 42001',
-    featured: false,
-    summary: 'Greenlight Guru became the second major QMS provider to achieve formal ISO/IEC 42001 certification for artificial intelligence governance, accompanying the rollout of an open AI Connector supporting ChatGPT, Claude, Copilot, and Gemini.',
-    linkText: 'Compare AI Standards',
-    url: '/ai-trends'
   },
   {
     id: 'saram-ai-readiness-benchmark',
