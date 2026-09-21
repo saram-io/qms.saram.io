@@ -13,6 +13,30 @@ export interface NewsItem {
 
 export const LATEST_NEWS: NewsItem[] = [
   {
+    id: 'fda-qmsr-clause-7-1-enforcement',
+    title: 'FDA Enforces QMSR Clause 7.1 in Post-QSIT Audits, Citing Deficiencies in Dynamic Risk Management',
+    date: 'September 20, 2026',
+    category: 'Regulatory & QMSR',
+    source: 'FDA CDRH Compliance Enforcement Data',
+    badge: 'QMSR Citations',
+    featured: true,
+    summary: 'CDRH inspectional analyses under the harmonized QMSR (21 CFR Part 820 / ISO 13485:2016) reveal that Clause 7.1 (Risk Management in Product Realization) now represents over 20% of Form 483 observations and recent warning letters. FDA investigators are penalizing manufacturers relying on static risk management files, mandating closed-loop feedback where field complaints, adverse events, and supplier deviations dynamically update risk controls and Design History Files (DHFs).',
+    linkText: 'Explore MedTech Shortlist',
+    url: '/shortlist'
+  },
+  {
+    id: 'veeva-falcon-safety-agentic-operations',
+    title: 'Veeva Unveils Falcon Safety to Automate Pharmacovigilance Across Multi-Vendor Safety Databases',
+    date: 'September 20, 2026',
+    category: 'Agentic Compliance',
+    source: 'Veeva Systems Corporate Announcement',
+    badge: 'Agentic Safety',
+    featured: false,
+    summary: 'Veeva Systems launched Veeva Falcon Safety, an agentic safety operations application built to automate adverse event intake, triage, and regulatory case reporting across enterprise biopharma. Built on Veeva’s MAAP architecture, the autonomous agent engine interoperates with both Veeva Safety and third-party E2B-compliant systems—such as Oracle Argus and ArisGlobal LifeSphere MultiVigilance—while generating 21 CFR Part 11 compliant audit trails.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
     id: 'qualio-pydantic-ai-evals',
     title: 'Qualio Deploys Pydantic AI Architecture with 300+ Automated Evals for Defensible Agentic Compliance',
     date: 'September 19, 2026',
@@ -115,7 +139,7 @@ export const LATEST_NEWS: NewsItem[] = [
     category: 'Regulatory & QMSR',
     source: 'FDA CDRH Compliance Program Notice',
     badge: 'Regulatory Watch',
-    featured: true,
+    featured: false,
     summary: 'The FDA has formally operationalized Compliance Program CP 7382.850 ("Inspection of Medical Device Manufacturers"), fully retiring the legacy Quality System Inspection Technique (QSIT). Field investigators are now conducting inspections under the harmonized QMSR framework with heightened scrutiny into Total Product Life Cycle (TPLC) risk management, supplier audit records, and automated design control trace matrices.',
     linkText: 'Explore MedTech Shortlist',
     url: '/shortlist'
@@ -167,29 +191,5 @@ export const LATEST_NEWS: NewsItem[] = [
     summary: 'Veeva Systems officially shipped its Model Context Protocol (MCP) Server for the Vault Quality Cloud. Enterprise biopharma can now deploy standardized Anthropic-protocol AI agent swarms to query validated quality documents, deviations, and batch release records without proprietary vendor lock-in.',
     linkText: 'Read Architectural Analysis',
     url: '/ai-trends'
-  },
-  {
-    id: 'fda-qmsr-enforcement',
-    title: 'FDA Quality Management System Regulation (QMSR) Reaches Full Inspectional Enforcement',
-    date: 'August 2026',
-    category: 'Regulatory & QMSR',
-    source: 'FDA CDRH Notice',
-    badge: 'Regulatory Watch',
-    featured: false,
-    summary: 'The FDA’s landmark QMSR rule harmonizing 21 CFR Part 820 with ISO 13485:2016 has entered full enforcement. Medical device manufacturers and SaMD developers face revised inspection models focusing on risk management files and automated design control trace matrices.',
-    linkText: 'Explore MedTech Shortlist',
-    url: '/shortlist'
-  },
-  {
-    id: 'saram-ai-readiness-benchmark',
-    title: 'Saram Research Publishes QMS AI Readiness & Open Data Benchmark Index',
-    date: 'July 2026',
-    category: 'Market Research',
-    source: 'Saram Intelligence Lab',
-    badge: 'Benchmark',
-    featured: false,
-    summary: 'Our independent benchmark audits 16+ life sciences QMS suites across MCP support, modern REST API maturity, walled-garden lock-in policies, and 21 CFR Part 11 electronic audit trail defensibility for generative AI calls.',
-    linkText: 'Open Live Benchmark',
-    url: '/ai-readiness-tracker'
   }
 ];

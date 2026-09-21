@@ -57,7 +57,7 @@ export const VENDORS: Vendor[] = [
     targetBuyers: ['Big-pharma', 'Mid-pharma', 'CDMOs', 'Med device', 'Biotech/emerging'],
     summary: 'The preeminent life sciences cloud platform. Unifies enterprise QMS, LIMS, Batch Release, Validation Management, and Training within a single 21 CFR Part 11 validated data substrate.',
     scope: ['Enterprise QMS', 'LIMS', 'Batch Release', 'Validation Management', 'Training Management', 'Document Control'],
-    aiMilestones: 'AI Agents achieved General Availability in Dec 2025. Vault MCP (Model Context Protocol) Server shipped in Aug 2026; Release 26R2.2 deployed to global production in Sept 2026.',
+    aiMilestones: 'AI Agents in GA; Vault MCP Server shipped Aug 2026; Release 26R2.2 in production; launched Falcon Safety in Sept 2026 for multi-vendor agentic pharmacovigilance across Oracle Argus and ArisGlobal.',
     aiReadiness: 'High (Agentic & MCP)',
     priceTransparency: 'Low (Opaque)',
     pricingModel: 'Enterprise multi-module annual contract; custom pricing based on organization size and modules with separate validation and implementation services.',
