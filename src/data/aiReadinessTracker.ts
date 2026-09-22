@@ -107,10 +107,10 @@ export const AI_READINESS_DATA: VendorAiReadiness[] = [
     byoAiPolicy: 'Vendor AI Only (Locked)',
     iso42001Status: 'Certified',
     part11AuditTrailDefensibility: 'Native Audit Log of AI Calls',
-    verdictSummary: 'MasterControl leads in compliance certification (achieved ISO 42001 in July 2025), but aggressively defends a closed walled garden. Customers must use MasterControl’s proprietary AI and face friction if attempting to pipe data into third-party agent swarms.',
+    verdictSummary: 'MasterControl leads in compliance certification (ISO 42001) and purpose-built tools (SOP Analyzer, Event Summarizer), but defends a closed walled garden. Customers must consume MasterControl proprietary AI agents without native MCP multi-agent interoperability.',
     commercialMoatRisk: 'High (Severe Lock-in)',
     apiPricingPosture: 'Expensive Add-on / Paywall',
-    lastAudited: 'August 2026',
+    lastAudited: 'September 2026',
     website: 'https://mastercontrol.com'
   },
   {
@@ -343,10 +343,10 @@ export const AI_READINESS_DATA: VendorAiReadiness[] = [
     byoAiPolicy: 'Connector Add-on Required',
     iso42001Status: 'Uncertified / None',
     part11AuditTrailDefensibility: 'Partial / Workaround Required',
-    verdictSummary: 'Transitioning from a legacy desktop/monolith heritage into modern cloud APIs. Willingness to open up is high in marketing statements, but technical rollout is staged across 2026–2027.',
+    verdictSummary: 'Accelerating transition from legacy heritage via Ideagen Mazlan agentic engine and automated workflow generation. Named Verdantix Leader for operational AI integration, though on-premise integrations remain constrained.',
     commercialMoatRisk: 'Medium (Conditional Access)',
     apiPricingPosture: 'Tiered / Usage Surcharges',
-    lastAudited: 'July 2026',
+    lastAudited: 'September 2026',
     website: 'https://ideagen.com'
   },
   {

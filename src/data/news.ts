@@ -13,6 +13,30 @@ export interface NewsItem {
 
 export const LATEST_NEWS: NewsItem[] = [
   {
+    id: 'fda-genai-cdrh-discussion-paper',
+    title: 'FDA CDRH Solicits Feedback on Generative AI Discussion Paper, Outlining Dynamic Lifecycle Risk Controls',
+    date: 'September 21, 2026',
+    category: 'Regulatory & QMSR',
+    source: 'FDA CDRH Notice / Federal Register',
+    badge: 'Regulatory Watch',
+    featured: true,
+    summary: 'The FDA CDRH published its regulatory discussion paper on Generative AI-Enabled Medical Devices (Docket No. FDA-2026-N-7874), soliciting public comment through October 19, 2026. The agency outlines expectations for Total Product Life Cycle (TPLC) governance, mandating dynamic risk management under harmonized QMSR Clause 7.1, post-market hallucination monitoring, and Predetermined Change Control Plans (PCCPs) for non-deterministic models.',
+    linkText: 'Explore MedTech Shortlist',
+    url: '/shortlist'
+  },
+  {
+    id: 'ideagen-mazlan-agentic-qms',
+    title: 'Ideagen Deploys Mazlan Agentic AI Platform to Automate QMS Workflows and Predictive Deviation Routing',
+    date: 'September 21, 2026',
+    category: 'Agentic Compliance',
+    source: 'Ideagen Corporate Announcement',
+    badge: 'Agentic QMS',
+    featured: false,
+    summary: 'Ideagen rolled out its Mazlan agentic compliance engine across Ideagen Quality Management, autonomously generating ISO-compliant workflows and drafting audit-ready CAPAs directly against 21 CFR Part 11 audit trails. The platform reduces workflow authoring cycles by up to 50% and was recognized as a Leader in the Verdantix Green Quadrant for operational AI integration.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
     id: 'fda-qmsr-clause-7-1-enforcement',
     title: 'FDA Enforces QMSR Clause 7.1 in Post-QSIT Audits, Citing Deficiencies in Dynamic Risk Management',
     date: 'September 20, 2026',
@@ -67,7 +91,7 @@ export const LATEST_NEWS: NewsItem[] = [
     category: 'AI & Protocols',
     source: 'Greenlight Guru Engineering Announcement',
     badge: 'MCP Server',
-    featured: true,
+    featured: false,
     summary: 'Greenlight Guru released its production Model Context Protocol (MCP) Server for the GG Quality suite, enabling MedTech teams to query CAPAs, nonconformances, and design trace records directly via Claude, ChatGPT, and Copilot. The implementation establishes an open, standardized protocol interface that bypasses proprietary API lock-in while maintaining 21 CFR Part 11 audit trails.',
     linkText: 'Open Live Benchmark',
     url: '/ai-readiness-tracker'
@@ -167,29 +191,5 @@ export const LATEST_NEWS: NewsItem[] = [
     summary: 'Dot Compliance achieved formal ISO/IEC 42001 certification for Artificial Intelligence Management Systems (AIMS), validating risk controls and explainability for its Salesforce-native Dottie AI Personas. The certification positions Dot Compliance alongside MasterControl and Greenlight Guru in auditable AI quality management.',
     linkText: 'Open Live Benchmark',
     url: '/ai-readiness-tracker'
-  },
-  {
-    id: 'hexagon-etq-reliance-ai',
-    title: 'Hexagon Launches ETQ Reliance AI Ecosystem with Automated Form and Complaint Advisors',
-    date: 'September 2026',
-    category: 'AI & Protocols',
-    source: 'Hexagon ETQ Press Release',
-    badge: 'Product Launch',
-    featured: false,
-    summary: 'Hexagon launched Reliance AI™ for ETQ Reliance, introducing native Form Field and Complaint & Feedback Advisors to automate intake and contextual investigation routing. The release advances Hexagon’s digital thread strategy, directly linking metrology anomaly detection with automated QMS non-conformance records.',
-    linkText: 'View Directory Details',
-    url: '/vendors'
-  },
-  {
-    id: 'veeva-vault-mcp-ga',
-    title: 'Veeva Systems Ships Vault Model Context Protocol (MCP) Server in GA (Release 26R2)',
-    date: 'August 2026',
-    category: 'AI & Protocols',
-    source: 'Veeva Systems Press Release',
-    badge: 'GA Release',
-    featured: false,
-    summary: 'Veeva Systems officially shipped its Model Context Protocol (MCP) Server for the Vault Quality Cloud. Enterprise biopharma can now deploy standardized Anthropic-protocol AI agent swarms to query validated quality documents, deviations, and batch release records without proprietary vendor lock-in.',
-    linkText: 'Read Architectural Analysis',
-    url: '/ai-trends'
   }
 ];
