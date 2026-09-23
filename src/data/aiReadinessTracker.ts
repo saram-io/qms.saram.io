@@ -84,7 +84,7 @@ export const AI_READINESS_DATA: VendorAiReadiness[] = [
     byoAiPolicy: 'Full BYO-AI Allowed',
     iso42001Status: 'SOC 2 AI Trust Only',
     part11AuditTrailDefensibility: 'Native Audit Log of AI Calls',
-    verdictSummary: 'Veeva made a historic strategic pivot from a proprietary walled garden to an open agentic hub by shipping the first enterprise QMS MCP Server in August 2026, reinforced in September 2026 by Falcon Safety agents interoperating across third-party safety databases.',
+    verdictSummary: 'Veeva made a historic strategic pivot from a proprietary walled garden to an open agentic hub by shipping the first enterprise QMS MCP Server in August 2026, reinforced in September 2026 by Falcon Safety and Falcon Router agents interoperating across enterprise safety and quality workflows.',
     commercialMoatRisk: 'Low (Open Protocols)',
     apiPricingPosture: 'Included in Base License',
     lastAudited: 'September 2026',
@@ -139,9 +139,9 @@ export const AI_READINESS_DATA: VendorAiReadiness[] = [
   },
   {
     id: 'hexagon-etq',
-    vendorName: 'Hexagon (ETQ)',
+    vendorName: 'Octave (ETQ Reliance)',
     ticker: 'STO: HEXA-B',
-    productName: 'ETQ Reliance',
+    productName: 'Octave Reliance (ETQ Reliance)',
     tier: 1,
     tierLabel: 'Tier 1 — Platform Incumbent',
     category: 'Platform Incumbent',
@@ -155,10 +155,10 @@ export const AI_READINESS_DATA: VendorAiReadiness[] = [
     byoAiPolicy: 'Connector Add-on Required',
     iso42001Status: 'Uncertified / None',
     part11AuditTrailDefensibility: 'Partial / Workaround Required',
-    verdictSummary: 'ETQ Reliance functions as an industrial manufacturing hub. While robust for cross-plant workflows and quality data capture, third-party AI integration requires custom middleware connectors rather than open protocols.',
+    verdictSummary: 'Octave Reliance (formerly ETQ Reliance) functions as an industrial and life sciences manufacturing hub recognized as a Leader in the 2026 Nucleus Research QMS Value Matrix. While robust for cross-plant workflows and quality data capture, third-party AI integration requires custom middleware connectors rather than open protocols.',
     commercialMoatRisk: 'Medium (Conditional Access)',
     apiPricingPosture: 'Tiered / Usage Surcharges',
-    lastAudited: 'July 2026',
+    lastAudited: 'September 2026',
     website: 'https://etq.com'
   },
   {

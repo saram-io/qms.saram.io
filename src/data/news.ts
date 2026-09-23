@@ -13,6 +13,30 @@ export interface NewsItem {
 
 export const LATEST_NEWS: NewsItem[] = [
   {
+    id: 'veeva-falcon-router-agent',
+    title: 'Veeva Announces Falcon Router to Automate Complaint and Adverse Event Triage into Vault QMS',
+    date: 'September 22, 2026',
+    category: 'Agentic Compliance',
+    source: 'Veeva Systems Press Release',
+    badge: 'Product Launch',
+    featured: false,
+    summary: 'Veeva Systems introduced Falcon Router, an autonomous AI agent engineered to ingest, classify, and route incoming product quality complaints, adverse events, and medical information inquiries across web and email channels. The agent dynamically directs records into Veeva QMS, Veeva Safety, or Veeva MedInquiry, eliminating manual triage reconciliation while enforcing GxP audit trails.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
+    id: 'nucleus-research-qms-value-matrix-2026',
+    title: 'Nucleus Research Releases 2026 QMS Value Matrix, Highlighting Agentic Workflows and Total Cost of Change',
+    date: 'September 22, 2026',
+    category: 'Market Research',
+    source: 'Nucleus Research Technology Value Matrix',
+    badge: 'Market Research',
+    featured: false,
+    summary: 'Nucleus Research published its 2026 QMS Technology Value Matrix, evaluating enterprise platforms on usability, functional breadth, and total cost of change under harmonized QMSR standards. MasterControl, Honeywell Technologies, ComplianceQuest, and Octave (ETQ Reliance) were recognized as Leaders, while Qualio and Greenlight Guru advanced in the Accelerators quadrant for rapid time-to-value.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
     id: 'fda-genai-cdrh-discussion-paper',
     title: 'FDA CDRH Solicits Feedback on Generative AI Discussion Paper, Outlining Dynamic Lifecycle Risk Controls',
     date: 'September 21, 2026',
@@ -43,7 +67,7 @@ export const LATEST_NEWS: NewsItem[] = [
     category: 'Regulatory & QMSR',
     source: 'FDA CDRH Compliance Enforcement Data',
     badge: 'QMSR Citations',
-    featured: true,
+    featured: false,
     summary: 'CDRH inspectional analyses under the harmonized QMSR (21 CFR Part 820 / ISO 13485:2016) reveal that Clause 7.1 (Risk Management in Product Realization) now represents over 20% of Form 483 observations and recent warning letters. FDA investigators are penalizing manufacturers relying on static risk management files, mandating closed-loop feedback where field complaints, adverse events, and supplier deviations dynamically update risk controls and Design History Files (DHFs).',
     linkText: 'Explore MedTech Shortlist',
     url: '/shortlist'
@@ -167,29 +191,5 @@ export const LATEST_NEWS: NewsItem[] = [
     summary: 'The FDA has formally operationalized Compliance Program CP 7382.850 ("Inspection of Medical Device Manufacturers"), fully retiring the legacy Quality System Inspection Technique (QSIT). Field investigators are now conducting inspections under the harmonized QMSR framework with heightened scrutiny into Total Product Life Cycle (TPLC) risk management, supplier audit records, and automated design control trace matrices.',
     linkText: 'Explore MedTech Shortlist',
     url: '/shortlist'
-  },
-  {
-    id: 'veeva-vault-release-26r2-2',
-    title: 'Veeva Deploys Vault Release 26R2.2 to Production Across Quality and Regulatory Clouds',
-    date: 'September 17, 2026',
-    category: 'Platform & M&A',
-    source: 'Veeva Systems Maintenance Notice',
-    badge: 'Production Upgrade',
-    featured: false,
-    summary: 'Veeva Systems deployed Vault Release 26R2.2 into global production environments, delivering targeted stability updates and document governance hardening following the 26R2 major cycle. The release reinforces the foundation for Vault Quality AI agent swarms and mandates platform-wide multi-factor authentication for enterprise tenants.',
-    linkText: 'View Directory Details',
-    url: '/vendors'
-  },
-  {
-    id: 'dot-compliance-iso-42001',
-    title: 'Dot Compliance Achieves Accredited ISO/IEC 42001 Certification for AI Governance',
-    date: 'September 2026',
-    category: 'Certification',
-    source: 'Dot Compliance Corporate Announcement',
-    badge: 'ISO 42001',
-    featured: false,
-    summary: 'Dot Compliance achieved formal ISO/IEC 42001 certification for Artificial Intelligence Management Systems (AIMS), validating risk controls and explainability for its Salesforce-native Dottie AI Personas. The certification positions Dot Compliance alongside MasterControl and Greenlight Guru in auditable AI quality management.',
-    linkText: 'Open Live Benchmark',
-    url: '/ai-readiness-tracker'
   }
 ];
