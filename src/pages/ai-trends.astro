@@ -7,15 +7,24 @@ const aiTrendsArticleSchema = {
   "@id": "https://qms.saram.io/ai-trends#article",
   "headline": "2026 AI Trends in Life Sciences QMS: ISO 42001, MCP, and Agentic Compliance",
   "description": "Analysis of 2026 AI inflection points in QMS: ISO 42001 certification, Model Context Protocol (MCP), and agentic compliance architectures.",
+  "image": "https://qms.saram.io/og.png",
   "url": "https://qms.saram.io/ai-trends",
   "datePublished": "2026-06-02",
   "dateModified": "2026-09-06",
   "inLanguage": "en-US",
   "author": {
-    "@id": "https://saram.io/#organization"
+    "@type": "Organization",
+    "name": "Saram Consulting",
+    "url": "https://saram.io"
   },
   "publisher": {
-    "@id": "https://saram.io/#organization"
+    "@type": "Organization",
+    "name": "Saram Consulting",
+    "url": "https://saram.io",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://qms.saram.io/logo.png"
+    }
   },
   "about": [
     { "@type": "Thing", "name": "Artificial Intelligence" },
@@ -35,6 +44,8 @@ const breadcrumbs = [
   description="Analysis of 2026 AI inflection points in QMS: ISO 42001 certification, Model Context Protocol (MCP), and agentic compliance architectures."
   activePath="/ai-trends"
   pageType="article"
+  datePublished="2026-06-02"
+  dateModified="2026-09-06"
   breadcrumbs={breadcrumbs}
   customSchema={aiTrendsArticleSchema}
 >

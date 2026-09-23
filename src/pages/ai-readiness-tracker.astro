@@ -8,15 +8,24 @@ const trackerArticleSchema = {
   "@id": "https://qms.saram.io/ai-readiness-tracker#article",
   "headline": "QMS AI Readiness & Open Data Tracker: Walled Gardens vs MCP",
   "description": "Independent tracker benchmarking life sciences QMS vendors on AI readiness, walled garden lock-in, Model Context Protocol (MCP) servers, and open API data access.",
+  "image": "https://qms.saram.io/og.png",
   "url": "https://qms.saram.io/ai-readiness-tracker",
   "datePublished": "2026-06-02",
   "dateModified": "2026-09-06",
   "inLanguage": "en-US",
   "author": {
-    "@id": "https://saram.io/#organization"
+    "@type": "Organization",
+    "name": "Saram Consulting",
+    "url": "https://saram.io"
   },
   "publisher": {
-    "@id": "https://saram.io/#organization"
+    "@type": "Organization",
+    "name": "Saram Consulting",
+    "url": "https://saram.io",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://qms.saram.io/logo.png"
+    }
   },
   "about": [
     { "@type": "Thing", "name": "Model Context Protocol (MCP)" },
@@ -80,10 +89,12 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title="QMS AI Readiness & Open Data Tracker | Walled Gardens vs MCP | Saram Consulting"
+  title="QMS AI Readiness & MCP Open Data Tracker | Saram Consulting"
   description="Independent tracker benchmarking life sciences QMS vendors on AI readiness, walled garden lock-in, Model Context Protocol (MCP) servers, and open API data access."
   activePath="/ai-readiness-tracker"
   pageType="article"
+  datePublished="2026-06-02"
+  dateModified="2026-09-06"
   breadcrumbs={breadcrumbs}
   customSchema={[trackerArticleSchema, trackerFaqSchema]}
 >

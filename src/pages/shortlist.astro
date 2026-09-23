@@ -8,15 +8,24 @@ const shortlistArticleSchema = {
   "@id": "https://qms.saram.io/shortlist#article",
   "headline": "Practical QMS Shortlist by Buyer Segment (2026)",
   "description": "Practical QMS buyer shortlists for Big-Pharma, Mid-Pharma, MedTech, CDMOs, Emerging Biotech, and Dietary Supplements.",
+  "image": "https://qms.saram.io/og.png",
   "url": "https://qms.saram.io/shortlist",
   "datePublished": "2026-06-02",
   "dateModified": "2026-09-06",
   "inLanguage": "en-US",
   "author": {
-    "@id": "https://saram.io/#organization"
+    "@type": "Organization",
+    "name": "Saram Consulting",
+    "url": "https://saram.io"
   },
   "publisher": {
-    "@id": "https://saram.io/#organization"
+    "@type": "Organization",
+    "name": "Saram Consulting",
+    "url": "https://saram.io",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://qms.saram.io/logo.png"
+    }
   },
   "about": [
     { "@type": "Thing", "name": "Quality Management Systems" },
@@ -83,6 +92,8 @@ const breadcrumbs = [
   description="Practical QMS buyer shortlists for Big-Pharma, Mid-Pharma, MedTech, CDMOs, Emerging Biotech, and Dietary Supplements."
   activePath="/shortlist"
   pageType="article"
+  datePublished="2026-06-02"
+  dateModified="2026-09-06"
   breadcrumbs={breadcrumbs}
   customSchema={[shortlistArticleSchema, shortlistFaqSchema]}
 >

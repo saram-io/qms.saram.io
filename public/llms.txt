@@ -1,0 +1,25 @@
+# Saram QMS Vendor Intelligence
+
+> Independent, empirical market intelligence, 4-tier structural taxonomy, buyer segment shortlists, and 2026 AI milestones for enterprise Quality Management Systems (QMS) in Life Sciences, Biotechnology, and MedTech.
+
+Published and curated by [Saram Consulting](https://saram.io).
+
+## Core Pages
+
+- [Market Architecture & 4 Tiers](https://qms.saram.io/tiers): In-depth breakdown of the 4 QMS market tiers: Platform Incumbents, Pure-Play QMS, Vertical Specialists, and AI Disruptors.
+- [Practical Buyer Shortlists](https://qms.saram.io/shortlist): Recommended software shortlists and evaluation criteria for Big-Pharma, Mid-Pharma, MedTech/Devices, CDMOs, Emerging Biotech, and Dietary Supplements.
+- [AI Readiness & Open Data Tracker](https://qms.saram.io/ai-readiness-tracker): Independent benchmark measuring 16+ QMS vendors on Anthropic Model Context Protocol (MCP) support, REST API openness, walled-garden lock-in, and 21 CFR Part 11 agent audit trails.
+- [2026 AI Trends in QMS](https://qms.saram.io/ai-trends): Analysis of critical 2026 inflection points: ISO/IEC 42001 certification, Model Context Protocol (MCP), and agentic compliance architectures.
+- [Complete Vendor Directory](https://qms.saram.io/vendors): Searchable directory of tracked life sciences quality management platforms, deployment models, price transparency ratings, and target segments.
+- [Research Methodology & Citations](https://qms.saram.io/about): Editorial independence policies, SEC filings, regulatory citations, and advisory services.
+
+## QMS Landscape 4-Tier Taxonomy
+
+- **Tier 1: Platform Incumbents**: Multi-application, validated enterprise cloud suites dominating global pharma (Veeva Systems, MasterControl, Honeywell Sparta TrackWise, Hexagon ETQ Reliance, PTC Arena, Siemens Opcenter, SAP QM, Oracle Health Sciences).
+- **Tier 2: Pure-Play QMS**: Agile, cloud-native mid-market leaders (Greenlight Guru, Qualio, Dot Compliance, ComplianceQuest, Ideagen, Scilife, SimplerQMS, ZenQMS, AssurX, Qualityze, IQVIA SmartSolve, Kivo, SafetyChain).
+- **Tier 3: Vertical & Adjacent Specialists**: Mission-critical sub-process owners (LIMS: LabWare, Thermo Fisher; RIM: Veeva RIM, Lorenz; Validation/CSA: Kneat, ValGenesis; PLM: PTC Arena; MES: MasterControl Mx, Werum PAS-X).
+- **Tier 4: Disruptors & AI-Native**: Modern AI architectures and agentic copilots (Ketryx, Seal, Complere, AkelaHub, Shoreline AI).
+
+## Full Text Reference
+
+- [Full Text Intelligence Reference](https://qms.saram.io/llms-full.txt): Complete consolidated knowledge base formatted for direct LLM ingestion.

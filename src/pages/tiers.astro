@@ -14,15 +14,24 @@ const tiersArticleSchema = {
   "@id": "https://qms.saram.io/tiers#article",
   "headline": "QMS Landscape Tiers (1 to 4): Structural Taxonomy",
   "description": "In-depth breakdown of the 4 QMS market tiers: Platform Incumbents, Pure-Play QMS, Vertical Specialists, and AI Disruptors.",
+  "image": "https://qms.saram.io/og.png",
   "url": "https://qms.saram.io/tiers",
   "datePublished": "2026-06-02",
   "dateModified": "2026-09-06",
   "inLanguage": "en-US",
   "author": {
-    "@id": "https://saram.io/#organization"
+    "@type": "Organization",
+    "name": "Saram Consulting",
+    "url": "https://saram.io"
   },
   "publisher": {
-    "@id": "https://saram.io/#organization"
+    "@type": "Organization",
+    "name": "Saram Consulting",
+    "url": "https://saram.io",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://qms.saram.io/logo.png"
+    }
   },
   "about": [
     { "@type": "Thing", "name": "Quality Management Systems" },
@@ -41,6 +50,8 @@ const breadcrumbs = [
   description="In-depth breakdown of the 4 QMS market tiers: Platform Incumbents, Pure-Play QMS, Vertical Specialists, and AI Disruptors."
   activePath="/tiers"
   pageType="article"
+  datePublished="2026-06-02"
+  dateModified="2026-09-06"
   breadcrumbs={breadcrumbs}
   customSchema={tiersArticleSchema}
 >

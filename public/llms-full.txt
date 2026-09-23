@@ -1,0 +1,89 @@
+# Saram QMS Vendor Intelligence — Comprehensive Reference
+
+> Full-text knowledge base on enterprise Quality Management Systems (QMS) in Life Sciences, Biotechnology, and MedTech. Curated as of mid-2026 by Saram Consulting (https://saram.io).
+
+---
+
+## 1. Executive Summary & Market Dynamics (2026)
+
+The life sciences Quality Management System (QMS) landscape is undergoing a once-in-a-generation reconfiguration driven by three macro forces:
+1. **FDA Quality Management System Regulation (QMSR)**: Harmonization of 21 CFR Part 820 with ISO 13485:2016.
+2. **Shift from Computer System Validation (CSV) to Computer Software Assurance (CSA)**: Risk-based automated testing superseding heavy documentation burdens.
+3. **Agentic Compliance & Model Context Protocol (MCP)**: The evolution from static chatbots to certified, auditable AI agents interacting directly with quality records via standardized interfaces.
+
+---
+
+## 2. The 4 Market Tiers
+
+### Tier 1: Platform Incumbents
+Multi-application, strategic, validated cloud suites dominating global enterprise biopharma:
+- **Veeva Systems (NYSE: VEEV)**: Vault Quality Cloud / QualityOne. Unifies QMS, LIMS, Batch Release, Validation Management, and Training. AI Agents released Dec 2025; Model Context Protocol (MCP) Server GA Aug 2026.
+- **MasterControl**: $200M ARR platform combining QMS, MES, and asset calibration (Qualer acquisition March 2025). Certified under ISO/IEC 42001 (AI Management System) in July 2025. FedRAMP authorized.
+- **Honeywell (Sparta Systems)**: TrackWise & TrackWise Digital (acquired Dec 2020 for $1.3B). Dominant legacy enterprise biopharma standard with TrackWise Digital on Salesforce and Honeywell Forge plant analytics.
+- **Hexagon (ETQ)**: ETQ Reliance (acquired April 2022 for $1.2B). Strong in mid/large manufacturing and process industries, featuring Hexagon Manufacturing Intelligence sensor integration and 40+ modular quality apps.
+- **PTC (Arena Solutions)**: PLM-centric QMS (acquired 2021). Dominates discrete medical device hardware, Design History Files (DHF), and engineering change orders.
+- **Siemens (Opcenter)**: Closed-loop manufacturing operations management (MOM / MES) for discrete and process manufacturing.
+- **SAP (S/4HANA QM)**: Embedded directly into the ERP core; optimal when IT consolidation supersedes standalone QMS tooling.
+- **Oracle (Health Sciences)**: Argus Safety, LIMS, and clinical quality estates for legacy Oracle-standardized enterprises.
+
+### Tier 2: Pure-Play QMS
+Cloud-native, agile platforms optimized for rapid deployment in mid-market life sciences:
+- **Greenlight Guru**: MedTech / IVD / SaMD focus with 1,100+ customers. Native FDA QMSR support, open AI Connector (shipped Q2 2026), and ISO 42001 certified June 2026.
+- **Qualio**: "Agentic Compliance Platform" with autonomous agents for regulatory gap assessment, audit readiness scoring, and regulatory watch.
+- **Dot Compliance**: AI-first QMS on Salesforce. Features Dottie AI (Gen 5.0 agentic Personas launched April 2026) and ISO 42001 alignment.
+- **ComplianceQuest**: Salesforce AppExchange native; unifies QMS, EHS, and Supplier Quality.
+- **Ideagen Quality Management (fka Q-Pulse)**: 18,000+ customers across aviation, healthcare, and life sciences. AI-first CTO initiative launched Feb 2026.
+- **Scilife**: "Smart Quality Platform" backed by Five Elms Capital, with strong European life sciences roots.
+- **SimplerQMS**: Validated Microsoft 365/SharePoint-based eQMS for pharma and MedTech.
+- **ZenQMS**: Audit-ready, all-inclusive pricing eQMS for clinical biotechs and testing facilities.
+- **AssurX**: 25+ year configurable workflow engine across life sciences and high-precision manufacturing.
+- **Qualityze**: Salesforce-native modular EQMS for regulated manufacturers.
+- **IQVIA (SmartSolve)**: Built on Pilgrim Quality Solutions heritage; links CRO clinical data, pharmacovigilance, and post-marketing surveillance.
+- **Kivo**: Unified RIM, eTMF, and QMS eliminating cross-module synchronization drag for emerging biotechs.
+- **SafetyChain**: Plant-floor food safety, supplier compliance, and FSMA/GFSI management for dietary supplements and food producers.
+- **SafetyCulture**: Mobile-first frontline inspections, plant audits, and operational checklist automation.
+
+### Tier 3: Vertical & Adjacent Specialists
+Sub-process owners managing mission-critical regulated micro-workflows:
+- **LIMS**: LabWare, Thermo Fisher SampleManager, Waters, Agilent, STARLIMS, LabVantage.
+- **RIM**: Veeva RIM, Lorenz (Anju), Rimsys, Generis CARA.
+- **Validation (GAMP 5 / CSA)**: Kneat Gx, ValGenesis VLMS (VAL™ Agentic AI), Veeva Validation Management.
+- **PLM / Design Controls**: Arena/PTC, Dassault ENOVIA, Siemens Teamcenter, Aras Innovator.
+- **MES / eBR**: MasterControl Manufacturing Excellence, Rockwell PharmaSuite, Werum PAS-X.
+- **Safety & Pharmacovigilance**: Veeva Vault Safety, Oracle Argus, IQVIA Vigilance.
+- **EHS**: Intelex, Cority, VelocityEHS, Sphera, Enablon.
+- **Training & LMS**: Veeva LearnGxP, MasterControl Training, UL ComplianceWire.
+
+### Tier 4: New Entrants & Disruptors
+AI-native architectures, foundation model pioneers, and discrete copilots:
+- **Ketryx**: AI-native connected lifecycle management and QMS/ALM for MedTech and SaMD; orchestrates Jira/Git with automated DHF and IEC 62304 / ISO 13485 compliance.
+- **Seal (seal.run)**: YC and SNR-backed AI-native QMS built around a 17-capability blueprint for biologics, medical devices, and CDMOs.
+- **Complere (complere.tech)**: Early-stage AI compliance assistant.
+- **AI Copilot Cluster**: AkelaHub, Extractable, Shoreline AI, OnRamp QA.
+- **ServiceNow GRC/QMS**: Enterprise IT workflow engine evaluating life sciences entry.
+
+---
+
+## 3. Practical Buyer Shortlists
+
+1. **Big-Pharma**: Veeva Systems, Honeywell (Sparta TrackWise), Hexagon (ETQ), SAP QM, Oracle, Siemens. Core drivers: Multi-site governance, unified clinical-to-commercial platform, global health authority audit defense.
+2. **Mid-Pharma**: MasterControl, Qualio, Veeva Systems, Dot Compliance. Core drivers: Rapid time-to-value, pre-validated GxP workflows, integrated MES, agentic compliance.
+3. **Med Device / MedTech**: Greenlight Guru, Ketryx, PTC (Arena), Veeva + Product Surveillance. Core drivers: FDA QMSR (ISO 13485 + 21 CFR Part 820), Design History File (DHF) CAD trace, ISO 14971 risk.
+4. **CDMOs & CMOs**: Veeva Systems, MasterControl, Seal (seal.run). Core drivers: Multi-sponsor client partitioning, electronic batch records (eBR), release-by-exception velocity.
+5. **Biotech / Emerging**: Qualio, Kivo, Veeva Quality Basics, Dot Compliance. Core drivers: Turnkey validation, minimal administrative drag, seamless scaling through IND to Phase II.
+6. **Supplements & Food**: Hexagon (ETQ Reliance), SafetyChain, SafetyCulture. Core drivers: FDA FSMA & GFSI standards, mobile frontline plant floor audit checklists, ingredient qualification.
+
+---
+
+## 4. AI & Open Data Governance Criteria (MCP & ISO 42001)
+
+When procuring a modern QMS, buyers must evaluate:
+- **Model Context Protocol (MCP)**: Does the vendor offer a production MCP server or open API, allowing external enterprise AI agents (Claude, GPT, internal models) to query records without proprietary vendor lock-in?
+- **ISO/IEC 42001 Certification**: Independent third-party audit of the vendor's AI Management System ensuring algorithmic traceability, bias mitigation, and data isolation.
+- **21 CFR Part 11 Audit Trail for AI**: Immutable recording of model version, system prompt hash, user verification, and electronic signature for all automated decisions.
+- **BYO-AI Terms**: Freedom to connect proprietary models without mandatory per-seat copilot licensing penalties.
+
+---
+
+## 5. Contact & Advisory
+For bespoke vendor selection, CSA validation strategy, and GxP IT advisory, visit [saram.io](https://saram.io) or email info@saram.consulting.
