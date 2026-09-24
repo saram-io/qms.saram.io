@@ -13,6 +13,42 @@ export interface NewsItem {
 
 export const LATEST_NEWS: NewsItem[] = [
   {
+    id: 'veeva-vault-top-20-biopharma-expansion',
+    title: 'Veeva Secures 14th Top-20 Biopharma on Vault Platform as Live Deployments Eclipse 190',
+    date: 'September 23, 2026',
+    category: 'Platform & M&A',
+    source: 'Veeva Systems Press Release',
+    badge: 'Enterprise Growth',
+    featured: false,
+    summary: 'Veeva Systems announced that an additional top 20 global biopharmaceutical manufacturer has committed to its Vault CRM and platform architecture, expanding its market penetration to 14 of the top 20 global biopharmas with more than 190 live customer deployments. The enterprise milestone establishes a standardized data substrate across commercial, quality, and regulatory operations, accelerating the rollout of agentic workflows such as Agentic Call Reports and Falcon automated complaint triage.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
+    id: 'zenqms-acrosian-biometrics-partnership',
+    title: 'ZenQMS Selected by Acrosian to Anchor GxP Quality Infrastructure for AI-Augmented CRO Operations',
+    date: 'September 23, 2026',
+    category: 'Platform & M&A',
+    source: 'BioSpace / ZenQMS Corporate Announcement',
+    badge: 'CRO Partnership',
+    featured: false,
+    summary: 'AI-augmented biometrics contract research organization Acrosian selected ZenQMS as its electronic Quality Management System to underpin expanding clinical data management, biostatistics, and regulatory medical writing operations. The deployment provides a validated, audit-ready GxP quality foundation enforcing closed-loop traceability across AI-assisted biometric workflows while adhering to 21 CFR Part 11 and GCP integrity mandates.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
+    id: 'iso-9001-2026-publication-transition',
+    title: 'ISO 9001:2026 Publication Triggers 3-Year Transition Cycle Across Dual-Certified Life Sciences QMS',
+    date: 'September 23, 2026',
+    category: 'Regulatory & QMSR',
+    source: 'ISO / ANSI Standards Notice',
+    badge: 'Standard Revision',
+    featured: false,
+    summary: 'The International Organization for Standardization (ISO) formally published ISO 9001:2026, establishing a three-year transition window through September 2029 for certified enterprises. Life sciences organizations maintaining dual ISO 9001 and ISO 13485:2016 certifications are initiating eQMS gap analyses to address new mandates around ethical quality culture, digital transformation governance, and decoupled risk/opportunity controls under the FDA QMSR regime.',
+    linkText: 'Explore MedTech Shortlist',
+    url: '/shortlist'
+  },
+  {
     id: 'veeva-falcon-router-agent',
     title: 'Veeva Announces Falcon Router to Automate Complaint and Adverse Event Triage into Vault QMS',
     date: 'September 22, 2026',
@@ -155,41 +191,5 @@ export const LATEST_NEWS: NewsItem[] = [
     summary: 'ComplianceQuest rolled out native Agentic AI capabilities within its Summer \'26 release on the Salesforce AppExchange. The platform deploys autonomous agents designed to ingest nonconformances, perform root-cause investigations, and auto-draft CAPA action plans directly against 21 CFR Part 11 electronic audit trails.',
     linkText: 'View Directory Details',
     url: '/vendors'
-  },
-  {
-    id: 'ketryx-series-b-validated-ai',
-    title: 'Ketryx Secures $39M Series B Led by Transformation Capital, Deploys Validated AI Agents',
-    date: 'September 2026',
-    category: 'AI Disruptors',
-    source: 'Ketryx Press Release',
-    badge: '$39M Series B',
-    featured: false,
-    summary: 'Medical software lifecycle platform Ketryx closed a $39M Series B funding round led by Transformation Capital, bringing total capital to $55M as former Medtronic CEO Bill Hawkins joined the board. The company also expanded deployment of its validated AI agents, automating DHF cross-traceability and IEC 62304/ISO 14971 compliance across top MedTech enterprises.',
-    linkText: 'View Disruptor Tier 4',
-    url: '/tiers'
-  },
-  {
-    id: 'qualio-iso-42001-certification',
-    title: 'Qualio Achieves Accredited ISO/IEC 42001 Certification for Compliance Intelligence Platform',
-    date: 'September 2026',
-    category: 'Certification',
-    source: 'Qualio Corporate Announcement',
-    badge: 'ISO 42001',
-    featured: false,
-    summary: 'Qualio secured formal ISO/IEC 42001 certification for Artificial Intelligence Management Systems (AIMS), validating risk governance and explainability for its Compliance Intelligence engine. The accreditation reinforces automated gap analysis across FDA QMSR and ISO 13485 for emerging biopharma and MedTech innovators.',
-    linkText: 'Open Live Benchmark',
-    url: '/ai-readiness-tracker'
-  },
-  {
-    id: 'fda-cp-7382-850-qmsr',
-    title: 'FDA Operationalizes CP 7382.850 for QMSR Inspections, Formally Retiring QSIT',
-    date: 'September 2026',
-    category: 'Regulatory & QMSR',
-    source: 'FDA CDRH Compliance Program Notice',
-    badge: 'Regulatory Watch',
-    featured: false,
-    summary: 'The FDA has formally operationalized Compliance Program CP 7382.850 ("Inspection of Medical Device Manufacturers"), fully retiring the legacy Quality System Inspection Technique (QSIT). Field investigators are now conducting inspections under the harmonized QMSR framework with heightened scrutiny into Total Product Life Cycle (TPLC) risk management, supplier audit records, and automated design control trace matrices.',
-    linkText: 'Explore MedTech Shortlist',
-    url: '/shortlist'
   }
 ];
