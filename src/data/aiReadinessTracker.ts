@@ -84,7 +84,7 @@ export const AI_READINESS_DATA: VendorAiReadiness[] = [
     byoAiPolicy: 'Full BYO-AI Allowed',
     iso42001Status: 'SOC 2 AI Trust Only',
     part11AuditTrailDefensibility: 'Native Audit Log of AI Calls',
-    verdictSummary: 'Veeva made a historic strategic pivot from a proprietary walled garden to an open agentic hub by shipping the first enterprise QMS MCP Server in August 2026, reinforced in September 2026 by Falcon Safety and Falcon Router agents interoperating across enterprise safety and quality workflows.',
+    verdictSummary: 'Veeva made a historic strategic pivot from a proprietary walled garden to an open agentic hub by shipping the first enterprise QMS MCP Server in August 2026, reinforced in September 2026 by Falcon Safety, Falcon Router, and the Claude Cowork-integrated Study Builder Agent spanning quality, clinical EDC, and safety workflows.',
     commercialMoatRisk: 'Low (Open Protocols)',
     apiPricingPosture: 'Included in Base License',
     lastAudited: 'September 2026',

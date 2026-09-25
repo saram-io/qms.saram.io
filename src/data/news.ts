@@ -13,6 +13,42 @@ export interface NewsItem {
 
 export const LATEST_NEWS: NewsItem[] = [
   {
+    id: 'veeva-study-builder-agent',
+    title: 'Veeva Announces Study Builder Agent to Autonomously Configure Clinical EDC and Data Quality from Protocols',
+    date: 'September 24, 2026',
+    category: 'Agentic Compliance',
+    source: 'Veeva Systems Press Release',
+    badge: 'Agentic AI',
+    featured: true,
+    summary: 'Veeva Systems introduced the Veeva Study Builder Agent, an autonomous AI solution engineered to configure Veeva EDC and Veeva DQS (Data Quality System) directly from study protocols. Delivered as a Claude Cowork plugin installed via a Veeva-managed GitHub repository, the agent automates forms, edit checks, and CQL-based listings using CDISC USDM standards while generating synthetic test data for audit-ready validation under GxP and 21 CFR Part 11.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
+    id: 'oxford-biomedica-veeva-quality-cloud',
+    title: 'Oxford Biomedica Partners with Veeva to Standardize Global Viral Vector QMS Across UK, France, and US',
+    date: 'September 24, 2026',
+    category: 'Platform & M&A',
+    source: 'PR Newswire / Oxford Biomedica',
+    badge: 'CDMO Quality',
+    featured: false,
+    summary: 'Viral vector CDMO Oxford Biomedica selected Veeva Quality Cloud to drive its global quality transformation across manufacturing facilities in the UK, France, and the United States. The enterprise deployment unifies Veeva QMS, QualityDocs, Training, and Learn GxP onto a single validated data substrate, eliminating disparate site quality silos to accelerate batch release and maintain rigorous alignment with FDA QMSR and EU GMP standards.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
+    id: 'mastercontrol-playbook-qmsr-enforcement',
+    title: 'MasterControl Releases 2026 Regulatory Playbook Synthesizing FDA QMSR Risk Enforcement Trends',
+    date: 'September 24, 2026',
+    category: 'Regulatory & QMSR',
+    source: 'MasterControl Regulatory Affairs',
+    badge: 'QMSR Playbook',
+    featured: false,
+    summary: 'MasterControl published its 2026 Regulatory Readiness Playbook for Life Sciences, evaluating early enforcement trends from post-QSIT FDA warning letters citing ISO 13485:2016 Clause 7.1. The analysis highlights an aggressive shift by CDRH investigators toward evaluating quality systems as integrated risk-management networks, warning MedTech manufacturers against static risk files and urging automated cross-linking between complaints, CAPAs, and Design History Files.',
+    linkText: 'Explore MedTech Shortlist',
+    url: '/shortlist'
+  },
+  {
     id: 'veeva-vault-top-20-biopharma-expansion',
     title: 'Veeva Secures 14th Top-20 Biopharma on Vault Platform as Live Deployments Eclipse 190',
     date: 'September 23, 2026',
@@ -155,41 +191,5 @@ export const LATEST_NEWS: NewsItem[] = [
     summary: 'Greenlight Guru released its production Model Context Protocol (MCP) Server for the GG Quality suite, enabling MedTech teams to query CAPAs, nonconformances, and design trace records directly via Claude, ChatGPT, and Copilot. The implementation establishes an open, standardized protocol interface that bypasses proprietary API lock-in while maintaining 21 CFR Part 11 audit trails.',
     linkText: 'Open Live Benchmark',
     url: '/ai-readiness-tracker'
-  },
-  {
-    id: 'ennov-ceo-oxana-pickeral',
-    title: 'Ennov Appoints Former Sparta Systems CEO Dr. Oxana Pickeral to Lead Global Agentic QMS Expansion',
-    date: 'September 2026',
-    category: 'Platform & M&A',
-    source: 'Ennov Corporate Announcement',
-    badge: 'Executive Move',
-    featured: false,
-    summary: 'European life sciences software platform Ennov named Dr. Oxana Pickeral, former President and CEO of Sparta Systems (Honeywell TrackWise), as Chief Executive Officer following strategic growth investments from Bregal Sagemount and Ardian Growth. Pickeral will lead Ennov\'s global scaling and accelerated rollout of agentic compliance across unified QMS, RIM, and clinical solutions.',
-    linkText: 'View Directory Details',
-    url: '/vendors'
-  },
-  {
-    id: 'kivo-headless-gxp',
-    title: 'Kivo Unveils Headless GxP™ Agent-Native Architecture Across Unified Quality and Regulatory Suite',
-    date: 'September 2026',
-    category: 'Agentic Compliance',
-    source: 'Kivo Product Announcement',
-    badge: 'Headless GxP',
-    featured: false,
-    summary: 'Kivo launched Headless GxP™, an open agent-native architecture unifying Quality, Clinical eTMF, and Regulatory Information Management for emerging biopharma. The architecture establishes a permissioned data layer allowing autonomous AI agents to orchestrate SOP reviews, deviation investigations, and trial records without cross-system middleware.',
-    linkText: 'View Directory Details',
-    url: '/vendors'
-  },
-  {
-    id: 'compliancequest-summer26-agentic-ai',
-    title: "ComplianceQuest Deploys Agentic AI in Summer '26 Release for Autonomous QMS and Safety Workflows",
-    date: 'September 2026',
-    category: 'Agentic Compliance',
-    source: 'ComplianceQuest Corporate Announcement',
-    badge: 'Agentic AI',
-    featured: false,
-    summary: 'ComplianceQuest rolled out native Agentic AI capabilities within its Summer \'26 release on the Salesforce AppExchange. The platform deploys autonomous agents designed to ingest nonconformances, perform root-cause investigations, and auto-draft CAPA action plans directly against 21 CFR Part 11 electronic audit trails.',
-    linkText: 'View Directory Details',
-    url: '/vendors'
   }
 ];
