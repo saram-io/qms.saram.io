@@ -588,7 +588,7 @@ export const VENDORS: Vendor[] = [
     targetBuyers: ['Med device', 'SaMD', 'Connected Health', 'AI/ML Medical Systems'],
     summary: 'An AI-native connected lifecycle management and compliance platform backed by $55M in total capital ($39M Series B led by Transformation Capital). Purpose-built for medical devices and software-as-a-medical-device (SaMD), natively orchestrating developer tools (Jira, GitHub, GitLab) to enforce real-time compliance with FDA QMSR, IEC 62304, ISO 13485, and ISO 14971 while automating DHF and cyber-traceability.',
     scope: ['Connected QMS / ALM', 'Automated DHF & Trace Matrix', 'IEC 62304 & ISO 14971', 'SaMD Cyber Compliance', 'Jira/Git Orchestration'],
-    aiMilestones: 'Shipped validated AI agents automating DHF synchronization, test generation, and regulatory trace matrices across four of the top five MedTech leaders.',
+    aiMilestones: 'Shipped validated AI agents automating DHF synchronization, test generation, and regulatory trace matrices across four of the top five MedTech leaders; introduced automated AI Change Impact Assessment for dynamic requirement updates under FDA CSA in Sept 2026.',
     aiReadiness: 'High (Agentic & MCP)',
     priceTransparency: 'High (Transparent)',
     pricingModel: 'Predictable developer-seat and repository-based SaaS subscription; transparent tier structure for medical software teams.',

@@ -13,6 +13,54 @@ export interface NewsItem {
 
 export const LATEST_NEWS: NewsItem[] = [
   {
+    id: 'fda-rasd-premarket-guidance',
+    title: 'FDA CDRH Issues Draft Guidance on Robotically-Assisted Surgical Devices, Mandating Dynamic Lifecycle Risk Controls',
+    date: 'September 25, 2026',
+    category: 'Regulatory & QMSR',
+    source: 'FDA CDRH Notice / Federal Register',
+    badge: 'Draft Guidance',
+    featured: true,
+    summary: 'The FDA CDRH published comprehensive draft guidance on premarket submissions for Robotically-Assisted Surgical Devices (RASDs, Docket No. FDA-2026-N-9505), establishing rigorous expectations across 510(k), De Novo, and PMA pathways. The agency mandates total product lifecycle risk management under harmonized QMSR Clause 7.1, software lifecycle controls under IEC 62304, cybersecurity verification, and human factors validation (IEC 62366), while introducing an umbrella framework to evaluate modular indications.',
+    linkText: 'Explore MedTech Shortlist',
+    url: '/shortlist'
+  },
+  {
+    id: 'eu-ivdr-class-c-written-agreement-deadline',
+    title: 'EU IVDR Class C Legacy Device Deadline Reached as Manufacturers Finalize Notified Body Agreements',
+    date: 'September 25, 2026',
+    category: 'Regulatory & QMSR',
+    source: 'European Commission / Regulation (EU) 2024/1860',
+    badge: 'IVDR Deadline',
+    featured: false,
+    summary: 'Medical device manufacturers across Europe face the September 26, 2026 statutory deadline under Regulation (EU) 2024/1860 to execute signed written agreements with Notified Bodies for legacy Class C in vitro diagnostics. Securing these agreements requires audit-ready proof of a fully compliant quality management system under IVDR Article 10(8), granting extended market placement through December 2028 while uncontracted devices face immediate distribution bans.',
+    linkText: 'Explore MedTech Shortlist',
+    url: '/shortlist'
+  },
+  {
+    id: 'profusa-gmed-iso-13485-certification',
+    title: 'Profusa Secures Positive Decision from GMED for ISO 13485 Medical Device QMS Certification',
+    date: 'September 25, 2026',
+    category: 'Certification',
+    source: 'GlobeNewswire / GMED Notified Body',
+    badge: 'ISO 13485',
+    featured: false,
+    summary: 'Profusa received a positive certification decision from French notified body GMED for its Quality Management System under ISO 13485:2016 for the Lumee® Oxygen Platform. The milestone validates the company’s QMS architecture against international device standards, serving as the required prerequisite for completing EU MDR conformity assessments toward CE mark commercialization across European member states.',
+    linkText: 'View Directory Details',
+    url: '/vendors'
+  },
+  {
+    id: 'usdm-mcp-gxp-validation-framework',
+    title: 'USDM Life Sciences Unveils GxP Validation Framework for Model Context Protocol (MCP) in Regulated eQMS',
+    date: 'September 25, 2026',
+    category: 'AI & Protocols',
+    source: 'USDM Life Sciences Architecture Brief',
+    badge: 'MCP Governance',
+    featured: false,
+    summary: 'USDM Life Sciences published a validation architecture for implementing the Model Context Protocol (MCP) across regulated life sciences systems, establishing bounded decision boundaries for autonomous AI agents. The framework applies Computer Software Assurance (CSA) principles under FDA QMSR and 21 CFR Part 11, providing standardized protocols for tool authentication, tamper-evident audit logging, and automated eval verification.',
+    linkText: 'Open Live Benchmark',
+    url: '/ai-readiness-tracker'
+  },
+  {
     id: 'veeva-study-builder-agent',
     title: 'Veeva Announces Study Builder Agent to Autonomously Configure Clinical EDC and Data Quality from Protocols',
     date: 'September 24, 2026',
@@ -115,7 +163,7 @@ export const LATEST_NEWS: NewsItem[] = [
     category: 'Regulatory & QMSR',
     source: 'FDA CDRH Notice / Federal Register',
     badge: 'Regulatory Watch',
-    featured: true,
+    featured: false,
     summary: 'The FDA CDRH published its regulatory discussion paper on Generative AI-Enabled Medical Devices (Docket No. FDA-2026-N-7874), soliciting public comment through October 19, 2026. The agency outlines expectations for Total Product Life Cycle (TPLC) governance, mandating dynamic risk management under harmonized QMSR Clause 7.1, post-market hallucination monitoring, and Predetermined Change Control Plans (PCCPs) for non-deterministic models.',
     linkText: 'Explore MedTech Shortlist',
     url: '/shortlist'
@@ -143,53 +191,5 @@ export const LATEST_NEWS: NewsItem[] = [
     summary: 'CDRH inspectional analyses under the harmonized QMSR (21 CFR Part 820 / ISO 13485:2016) reveal that Clause 7.1 (Risk Management in Product Realization) now represents over 20% of Form 483 observations and recent warning letters. FDA investigators are penalizing manufacturers relying on static risk management files, mandating closed-loop feedback where field complaints, adverse events, and supplier deviations dynamically update risk controls and Design History Files (DHFs).',
     linkText: 'Explore MedTech Shortlist',
     url: '/shortlist'
-  },
-  {
-    id: 'veeva-falcon-safety-agentic-operations',
-    title: 'Veeva Unveils Falcon Safety to Automate Pharmacovigilance Across Multi-Vendor Safety Databases',
-    date: 'September 20, 2026',
-    category: 'Agentic Compliance',
-    source: 'Veeva Systems Corporate Announcement',
-    badge: 'Agentic Safety',
-    featured: false,
-    summary: 'Veeva Systems launched Veeva Falcon Safety, an agentic safety operations application built to automate adverse event intake, triage, and regulatory case reporting across enterprise biopharma. Built on Veeva’s MAAP architecture, the autonomous agent engine interoperates with both Veeva Safety and third-party E2B-compliant systems—such as Oracle Argus and ArisGlobal LifeSphere MultiVigilance—while generating 21 CFR Part 11 compliant audit trails.',
-    linkText: 'View Directory Details',
-    url: '/vendors'
-  },
-  {
-    id: 'qualio-pydantic-ai-evals',
-    title: 'Qualio Deploys Pydantic AI Architecture with 300+ Automated Evals for Defensible Agentic Compliance',
-    date: 'September 19, 2026',
-    category: 'Agentic Compliance',
-    source: 'Qualio Engineering Architecture Brief',
-    badge: 'Agentic Evals',
-    featured: false,
-    summary: 'Qualio detailed its production agentic compliance architecture built on Pydantic AI and Pydantic Evals, enforcing over 300 automated regression evaluation gates per deployment. The type-safe orchestration layer translates natural-language quality criteria into structured, auditable validation checkpoints, ensuring that autonomous SOP generation and FDA QMSR gap analyses remain verifiable under 21 CFR Part 11.',
-    linkText: 'View Directory Details',
-    url: '/vendors'
-  },
-  {
-    id: 'ptc-arena-2026-2-ai-engine',
-    title: 'PTC Deploys Arena 2026.2 Introducing Arena Connect and Bedrock-Powered AI Engine',
-    date: 'September 19, 2026',
-    category: 'AI & Protocols',
-    source: 'PTC Arena Release Notes',
-    badge: 'Release 2026.2',
-    featured: false,
-    summary: 'PTC deployed Arena release 2026.2, introducing Arena Connect to provide visual, low-code integration pipelines between enterprise MES, ERP, and quality records. The update embeds the Amazon Bedrock-powered Arena AI Engine, automating BOM compliance verifications, engineering change summaries, and conversational guidance for Engineering Change Orders (ECOs) and CAPAs.',
-    linkText: 'View Directory Details',
-    url: '/vendors'
-  },
-  {
-    id: 'greenlight-guru-mcp-server',
-    title: 'Greenlight Guru Ships Production Model Context Protocol (MCP) Server for GG Quality',
-    date: 'September 18, 2026',
-    category: 'AI & Protocols',
-    source: 'Greenlight Guru Engineering Announcement',
-    badge: 'MCP Server',
-    featured: false,
-    summary: 'Greenlight Guru released its production Model Context Protocol (MCP) Server for the GG Quality suite, enabling MedTech teams to query CAPAs, nonconformances, and design trace records directly via Claude, ChatGPT, and Copilot. The implementation establishes an open, standardized protocol interface that bypasses proprietary API lock-in while maintaining 21 CFR Part 11 audit trails.',
-    linkText: 'Open Live Benchmark',
-    url: '/ai-readiness-tracker'
   }
 ];
