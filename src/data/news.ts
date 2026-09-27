@@ -13,6 +13,42 @@ export interface NewsItem {
 
 export const LATEST_NEWS: NewsItem[] = [
   {
+    id: 'salesforce-life-sciences-mcp-agentforce',
+    title: 'Salesforce Introduces Life Sciences MCP to Extend Governed Agentforce Workflows Across Enterprise Surfaces',
+    date: 'September 26, 2026',
+    category: 'AI & Protocols',
+    source: 'Salesforce Corporate Announcement',
+    badge: 'MCP Standard',
+    featured: true,
+    summary: 'Salesforce unveiled Life Sciences MCP (Model Context Protocol), bringing open agentic interoperability to its life sciences cloud platform and Agentforce engine. The protocol layer natively enforces 21 CFR Part 11 audit trails, GxP validation, HIPAA data segregation, and zero-retention privacy across Slack, Microsoft Teams, WhatsApp, and developer agents like Claude Code without custom integration middleware.',
+    linkText: 'Open Live Benchmark',
+    url: '/ai-readiness-tracker'
+  },
+  {
+    id: 'sware-res-q-connect-mcp-gxp',
+    title: 'Sware Launches Res_Q Connect as MCP-Native GxP Integration Engine for Regulated eQMS and ERP Systems',
+    date: 'September 26, 2026',
+    category: 'Agentic Compliance',
+    source: 'Business Wire / Sware Announcement',
+    badge: 'MCP Platform',
+    featured: false,
+    summary: 'Sware released Res_Q Connect, an AI-validated integration platform built natively on the Model Context Protocol (MCP) to automate bidirectional data synchronization across eQMS, ERP, and laboratory systems. The architecture allows life sciences organizations to orchestrate cross-platform compliance workflows using natural language while recording every automated action into an immutable 21 CFR Part 11-compliant audit trail.',
+    linkText: 'Open Live Benchmark',
+    url: '/ai-readiness-tracker'
+  },
+  {
+    id: 'fda-boston-scientific-imager-ii-recall',
+    title: 'FDA Classifies Boston Scientific Imager II Angiographic Catheter Removal as Class I Recall',
+    date: 'September 26, 2026',
+    category: 'Regulatory & QMSR',
+    source: 'FDA CDRH Medical Device Recalls',
+    badge: 'Class I Recall',
+    featured: false,
+    summary: 'The FDA CDRH officially classified the nationwide removal of Boston Scientific Imager II Angiographic Catheters as a Class I recall following reports of catheter tip degradation and detachment caused by insufficient stabilizer concentrations during manufacturing. The enforcement underscores heightened FDA QMSR Clause 7.1 and Clause 7.4 scrutiny on in-process manufacturing controls and closed-loop risk file remediation.',
+    linkText: 'Explore MedTech Shortlist',
+    url: '/shortlist'
+  },
+  {
     id: 'fda-rasd-premarket-guidance',
     title: 'FDA CDRH Issues Draft Guidance on Robotically-Assisted Surgical Devices, Mandating Dynamic Lifecycle Risk Controls',
     date: 'September 25, 2026',
@@ -67,7 +103,7 @@ export const LATEST_NEWS: NewsItem[] = [
     category: 'Agentic Compliance',
     source: 'Veeva Systems Press Release',
     badge: 'Agentic AI',
-    featured: true,
+    featured: false,
     summary: 'Veeva Systems introduced the Veeva Study Builder Agent, an autonomous AI solution engineered to configure Veeva EDC and Veeva DQS (Data Quality System) directly from study protocols. Delivered as a Claude Cowork plugin installed via a Veeva-managed GitHub repository, the agent automates forms, edit checks, and CQL-based listings using CDISC USDM standards while generating synthetic test data for audit-ready validation under GxP and 21 CFR Part 11.',
     linkText: 'View Directory Details',
     url: '/vendors'
@@ -155,41 +191,5 @@ export const LATEST_NEWS: NewsItem[] = [
     summary: 'Nucleus Research published its 2026 QMS Technology Value Matrix, evaluating enterprise platforms on usability, functional breadth, and total cost of change under harmonized QMSR standards. MasterControl, Honeywell Technologies, ComplianceQuest, and Octave (ETQ Reliance) were recognized as Leaders, while Qualio and Greenlight Guru advanced in the Accelerators quadrant for rapid time-to-value.',
     linkText: 'View Directory Details',
     url: '/vendors'
-  },
-  {
-    id: 'fda-genai-cdrh-discussion-paper',
-    title: 'FDA CDRH Solicits Feedback on Generative AI Discussion Paper, Outlining Dynamic Lifecycle Risk Controls',
-    date: 'September 21, 2026',
-    category: 'Regulatory & QMSR',
-    source: 'FDA CDRH Notice / Federal Register',
-    badge: 'Regulatory Watch',
-    featured: false,
-    summary: 'The FDA CDRH published its regulatory discussion paper on Generative AI-Enabled Medical Devices (Docket No. FDA-2026-N-7874), soliciting public comment through October 19, 2026. The agency outlines expectations for Total Product Life Cycle (TPLC) governance, mandating dynamic risk management under harmonized QMSR Clause 7.1, post-market hallucination monitoring, and Predetermined Change Control Plans (PCCPs) for non-deterministic models.',
-    linkText: 'Explore MedTech Shortlist',
-    url: '/shortlist'
-  },
-  {
-    id: 'ideagen-mazlan-agentic-qms',
-    title: 'Ideagen Deploys Mazlan Agentic AI Platform to Automate QMS Workflows and Predictive Deviation Routing',
-    date: 'September 21, 2026',
-    category: 'Agentic Compliance',
-    source: 'Ideagen Corporate Announcement',
-    badge: 'Agentic QMS',
-    featured: false,
-    summary: 'Ideagen rolled out its Mazlan agentic compliance engine across Ideagen Quality Management, autonomously generating ISO-compliant workflows and drafting audit-ready CAPAs directly against 21 CFR Part 11 audit trails. The platform reduces workflow authoring cycles by up to 50% and was recognized as a Leader in the Verdantix Green Quadrant for operational AI integration.',
-    linkText: 'View Directory Details',
-    url: '/vendors'
-  },
-  {
-    id: 'fda-qmsr-clause-7-1-enforcement',
-    title: 'FDA Enforces QMSR Clause 7.1 in Post-QSIT Audits, Citing Deficiencies in Dynamic Risk Management',
-    date: 'September 20, 2026',
-    category: 'Regulatory & QMSR',
-    source: 'FDA CDRH Compliance Enforcement Data',
-    badge: 'QMSR Citations',
-    featured: false,
-    summary: 'CDRH inspectional analyses under the harmonized QMSR (21 CFR Part 820 / ISO 13485:2016) reveal that Clause 7.1 (Risk Management in Product Realization) now represents over 20% of Form 483 observations and recent warning letters. FDA investigators are penalizing manufacturers relying on static risk management files, mandating closed-loop feedback where field complaints, adverse events, and supplier deviations dynamically update risk controls and Design History Files (DHFs).',
-    linkText: 'Explore MedTech Shortlist',
-    url: '/shortlist'
   }
 ];
